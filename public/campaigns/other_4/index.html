@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>再來一碗！</title>
+    <!-- ============== 輪播css ============== -->
+    <link
+      rel="stylesheet"
+      href="https://media.etmall.com.tw/sp/12500/swiper.min.css"
+    />
+    <!-- ============== 共用css ============== -->
+    <link
+      rel="stylesheet"
+      href="https://media.etmall.com.tw/sp/12500/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://media.etmall.com.tw/sp/12500/generate_v1.5.5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://media.etmall.com.tw/sp/12500/build.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      img {
+        width: 100%;
+        border: 0;
+      }
+      article,
+      main,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        margin: 0;
+        font-family:
+          PingFangTC-regular,
+          "LiHei Pro",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          "Source Han Sans TC",
+          "Microsoft JhengHei",
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji";
+        background-color: #7f1c15;
+        padding-bottom: 2em;
+      }
+      .sp__wallper {
+        background: url(webbg/bg.jpg) no-repeat;
+        background-position: 50% 0;
+      }
+      .sp--960 {
+        position: relative;
+        z-index: 0;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /* 調整logo位置大小 */
+      .logo {
+        position: absolute;
+        top: 1%;
+        left: 3%;
+        width: 22%;
+        max-width: 220px;
+      }
+      /* -- 主遊戲區開始 -- */
+      .clickToPlay {
+        cursor: pointer;
+      }
+      .layout--main {
+        background-color: #7f1c15;
+      }
+      .layout--award {
+        display: none;
+      }
+      .layout--award.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100dvw;
+        height: 100dvh;
+        z-index: 999;
+      }
+      .layout--award .btn {
+        width: 10em;
+        margin: 1em auto 0;
+        background-color: #c61b00;
+        color: #fff;
+        border-radius: 99em;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .layout--award .btn:hover {
+        background-color: #ff3535;
+        color: #ffe765;
+      }
+      /* -- 主遊戲區結束 -- */
+
+      /* -- 開搶區開始 -- */
+      .visual__fragment {
+        margin: 0 auto;
+        position: relative;
+      }
+      .noticeBtn {
+        position: absolute;
+        bottom: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 360px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .noticeBtn:hover {
+        filter: brightness(1.1);
+        transform: translateX(-50%) scale(1.1);
+      }
+      .noticeText {
+        position: absolute;
+        width: 100%;
+        height: 4.5em;
+        overflow: hidden;
+        padding: 0 10%;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #5e3504;
+        font-size: Min(2em, 5vw);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      /* -- 開搶區結束 -- */
+
+      /* -- 按鈕區開始 -- */
+      .btnWrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btnWrap .btn {
+        width: calc(100% / 3);
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+      .btnWrap .btn:hover {
+        filter: brightness(1.1);
+      }
+      .awardRecord {
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        background-color: #fff;
+        border-radius: 1em;
+        font-size: 1em;
+        color: #000;
+        text-align: center;
+        transform-origin: 50% 0;
+        transform: scaleY(0);
+        transition: all 0.3s;
+      }
+      .awardRecord.active {
+        height: auto;
+        padding: 1em;
+        margin: 0 1em 2vw;
+        transform: scaleY(1);
+      }
+      /* -- 按鈕區結束 -- */
+
+      /* -- 活動說明區開始 -- */
+      .activity--header,
+      .activity--center,
+      .activity--footer {
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      .activity--header {
+        width: Min(960px, 100dvw);
+        /* 調整活動說明標題底圖長度 */
+        height: Min(200px, 20dvw);
+        background: url(layout/header200.png) no-repeat;
+        background-size: cover;
+      }
+      .activity--center {
+        width: Min(960px, 100dvw);
+        padding: 0 0 3%;
+        background: url(layout/center60.png) repeat-y;
+        background-size: contain;
+      }
+      .activity--header .title {
+        /* 活動說明標題顏色 */
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        padding-top: Min(1em, 2vw);
+        font-size: Min(2em, 5vw);
+      }
+      .activity--center .note {
+        width: 100%;
+        /* 調整內文位置 */
+        padding: 0 12%;
+        color: #fff;
+      }
+      /* -- 活動說明區結束 -- */
+
+      /*-- note start --*/
+      .note {
+        font-size: 15px;
+        word-break: break-all;
+        line-height: 150%;
+      }
+      .note article {
+        padding: 1.5%;
+        /* 內部背景底色 */
+        background-color: #ffffff;
+        border-radius: 5px;
+      }
+      .note li {
+        font-size: 16px;
+        padding: 5px;
+      }
+      .note ol > li {
+        margin-left: 30px;
+      }
+      .note ol > li > a {
+        display: inline;
+        color: #f9cf8f;
+        text-decoration: underline;
+        word-break: break-all;
+      }
+      .note ol > li > a:hover {
+        text-decoration: none;
+      }
+      .note article a:hover {
+        text-decoration: none;
+      }
+      /*-- note end --*/
+    </style>
+  </head>
+  <body>
+    <div class="layout--main home--logo">
+      <a href="https://www.etmall.com.tw"
+        ><img class="logo" src="ehs-logo.png" alt="東森購物"
+      /></a>
+    </div>
+    <div id="spWrap" class="sp__wallper">
+      <main class="sp__main">
+        <section class="sp__visual">
+          <div class="layout--main">
+            <ul class="visual--auto clearfix">
+              <li class="visual__fragment width--auto">
+                <img src="layout/960_版頭.jpg" alt=" " />
+              </li>
+              <li
+                id="clickToPlay"
+                class="visual__fragment width--auto clickToPlay"
+                onclick="
+                  scrollToSection('clickToPlay');
+                  handleClick();
+                "
+              >
+                <img
+                  id="clickImg"
+                  class="clickImg"
+                  src="layout/960_點擊前.gif"
+                  alt=" "
+                />
+              </li>
+              <li class="visual__fragment width--auto">
+                <img src="layout/Top-Info.png" alt=" " />
+                <h2 class="noticeText">111/10/01 09:00</h2>
+                <div class="noticeBtn" onclick="handleAddNotice()">
+                  <img src="layout/360x120.png" alt="" />
+                </div>
+              </li>
+              <li class="visual__fragment width--auto">
+                <div class="btnWrap">
+                  <a href="#" class="btn">
+                    <img src="layout/buts/web/but_home.png" alt="" />
+                  </a>
+                  <div class="btn" onclick="handleToggleRecord()">
+                    <img src="layout/buts/web/but_detail.png" alt="" />
+                  </div>
+                  <a href="#" class="btn">
+                    <img src="layout/buts/web/but_share.png" alt="" />
+                  </a>
+                </div>
+                <div id="awardRecord" class="awardRecord">
+                  目前尚未有得獎紀錄
+                </div>
+              </li>
+              <li class="visual__fragment width--auto activity--header">
+                <h2 class="title">活動說明</h2>
+              </li>
+              <li class="visual__fragment width--auto activity--center">
+                <article class="note">
+                  <ol class="decimal-type">
+                    <li>
+                      活動期間：111/10/01  09:00 ~ 111/10/03
+                       00:00，每日5場，每場限時3小時。
+                    </li>
+                    <li>
+                      活動內容：活動期間，點擊「點我抽獎」即可獲得最高200等值之東森幣。單日共計5場，活動期間最高可獲得2,000等值之東森幣。中獎率100%，獎項限時限量，先抽先得；每時段獎項數量參閲上方"時段名額"説明。註：每時段獎項數量抽完僅可獲得安慰獎-樂透金1枚。
+                    </li>
+                    <li>
+                      活動獎項：東森幣200枚、東森幣100枚、東森幣50枚、東森幣30枚、東森幣10枚、樂透金5枚、樂透金3枚、安慰獎-樂透金1枚。
+                    </li>
+                    <li>給獎方式：東森幣、樂透金抽獎後立即匯入。</li>
+                    <li>東森幣、樂透金有效期限：111/10/03 23:59。</li>
+                    <li>
+                      1more藍芽音箱$800折價券：使用效期至111/10/05  23:59。
+                    </li>
+                    <li>1more藍芽音箱購買連結： <a href="#">點擊購買</a></li>
+                    <li>
+                      1more 無線耳機$500折價券：使用效期至111/10/05  23:59。
+                    </li>
+                    <li>1more 無線耳機購買連結： <a href="#">點擊購買</a></li>
+                    <li>
+                      東森購物網保有活動變更、修改或終止本活動之權力，如有異動，修改後之內容將公佈在東森購物網上。
+                    </li>
+                  </ol>
+
+                  <p class="p-notice">【注意事項】</p>
+                  <ol class="p-notice-words decimal-type">
+                    <li>
+                      【開搶提醒】使用方式：將EHS東森購物App更新至版本4.63.0才可點擊開啟提醒通知。
+                    </li>
+                  </ol>
+                  <p class="p-notice">【我的禮物盒說明】</p>
+                  <ol class="p-notice-words decimal-type">
+                    <li>
+                      【我的禮物盒】查詢方式：開啟東森購物行動裝置、APP→會員中心→點選【我的禮物盒】→選擇欲觀看獲獎明細→查詢獲獎活動資訊。
+                    </li>
+                    <li>【我的禮物盒】功能僅限行動裝置、APP支援。</li>
+                  </ol>
+                </article>
+              </li>
+              <li class="visual__fragment width--auto activity--footer">
+                <img src="layout/footer100.png" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div id="award" class="layout--award">
+            <div
+              style="
+                position: relative;
+                max-width: 600px;
+                margin: 15dvh auto 0;
+                padding: 20px;
+                text-align: center;
+              "
+            >
+              <!-- 獎項圖片 -->
+              <img
+                id="awardImg"
+                src=""
+                alt="中獎獎項"
+                style="max-width: 250px; display: block; margin: 0 auto"
+              />
+
+              <!-- 獎項文字內容 -->
+              <h3
+                id="awardContent"
+                style="
+                  color: #fff;
+                  margin-top: 15px;
+                  font-size: 24px;
+                  letter-spacing: 1px;
+                "
+              ></h3>
+
+              <div class="btn" onclick="closeAward()">再玩一次</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const clickToPlay = document.querySelector("#clickToPlay");
+      const clickImg = document.querySelector("#clickImg");
+      const award = document.querySelector("#award");
+      const awardImg = document.querySelector("#awardImg");
+      const awardContent = document.querySelector("#awardContent");
+      const awardRecord = document.querySelector("#awardRecord");
+
+      // 獎項
+      const awardPool = {
+        award1: { src: "award/250x350-01.jpg", content: "200枚東森幣" },
+        award2: { src: "award/250x350-02.jpg", content: "100枚東森幣" },
+        award3: { src: "award/250x350-03.jpg", content: "50枚東森幣" },
+        award4: { src: "award/250x350-04.jpg", content: "30枚東森幣" },
+        award5: { src: "award/250x350-05.jpg", content: "10枚東森幣" },
+        award6: { src: "award/250x350-06.jpg", content: "1枚東森幣" },
+        award7: { src: "award/250x350-07.jpg", content: "5枚樂透金" },
+        award8: { src: "award/250x350-08.jpg", content: "3枚樂透金" },
+        award9: { src: "award/250x350-09.jpg", content: "1枚樂透金" },
+      };
+      //點擊後，先出現動畫，後隨機出現獎項
+      function handleClick() {
+        // 避免重複點擊
+        clickToPlay.style.pointerEvents = "none";
+        // 避免背景滾動
+        document.body.style.overflow = "hidden";
+
+        // 更換動畫圖片
+        clickImg.attributes[2].nodeValue = "layout/960_點擊後.gif";
+
+        const awardsArray = Object.values(awardPool);
+
+        // 隨機決定中獎索引 (0 ~ 5)
+        const randomIndex = Math.floor(Math.random() * awardsArray.length);
+
+        // 取得中獎的獎項物件
+        const luckyAward = awardsArray[randomIndex];
+
+        // 塞入圖片路徑、圖片 alt 說明與畫面文字
+        awardImg.src = luckyAward.src;
+        awardImg.alt = luckyAward.content;
+        awardContent.textContent = `恭喜獲得：${luckyAward.content}`;
+
+        // 2.5秒後出現獎項
+        const timerId = setTimeout(() => {
+          award.classList.add("active");
+          // 填寫中獎紀錄
+          if (awardRecord.textContent.trim() === "目前尚未有得獎紀錄") {
+            awardRecord.innerHTML = "";
+          }
+          awardRecord.innerHTML += `${luckyAward.content}<br />`;
+        }, 2500);
+      }
+
+      // 關閉獎項彈窗的函式
+      function closeAward() {
+        award.classList.remove("active");
+        document.body.style.overflow = "auto";
+
+        // 還原點擊前的狀態，讓使用者可以再玩一次
+        clickImg.attributes[2].nodeValue = "layout/960_點擊前.gif";
+        clickToPlay.style.pointerEvents = "auto";
+      }
+
+      // 加入日期提示的函式
+      function handleAddNotice() {
+        alert("已加入行事曆(測試版)");
+      }
+
+      // 查看紀錄的函式
+      function handleToggleRecord() {
+        console.log("click");
+        awardRecord.classList.contains("active")
+          ? awardRecord.classList.remove("active")
+          : awardRecord.classList.add("active");
+      }
+      // 捲動到特定區域的函式
+      function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth", // 平滑捲動
+            block: "center", // 對齊區塊頂部
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

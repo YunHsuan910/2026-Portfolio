@@ -1,0 +1,532 @@
+<head>
+  <link rel="stylesheet" href="https://www.etmall.com.tw/XML/content/DMSetting/Final/209901/SP_1116205/animate.min.css">
+  <link rel="stylesheet" href="https://www.etmall.com.tw/XML/content/DMSetting/Final/209901/SP_1115354/generate_v1.css">
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      width: 100%;
+      border: 0;
+      display: block;
+    }
+
+    article,
+    main,
+    nav,
+    section {
+      display: block;
+    }
+
+
+    body {
+      background: #cf8691;
+    }
+
+    .sp--960 {
+      position: relative;
+      z-index: 0;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sp--960.icon_Home {
+      z-index: auto;
+    }
+
+    /* 主視覺 */
+    .logo-sp a,
+    .sp__visual a {
+      display: block;
+    }
+
+    .logo-sp img {
+      width: 100%;
+      border: 0;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .logo-sp a {
+      display: block;
+    }
+
+    .logo-sp {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 1%;
+      width: 25%;
+    }
+
+    @media screen and (min-width: 960px) {
+      .logo-sp {
+        top: 0;
+        left: 2%;
+        width: 30%;
+        max-width: 220px;
+      }
+    }
+
+    .sp__main {
+      background: url(bg.jpg) center 0 no-repeat;
+    }
+
+    @media screen and (max-width: 960px) {
+      body {
+        /* 自行修正背景顏色 */
+        background: url(bg-m.jpg) #cf8691 center 0 no-repeat;
+        background-size: 100% auto;
+      }
+
+      .sp__main {
+        background: none;
+      }
+    }
+
+    .sp__visual {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+    }
+
+    /* 連結參考
+.visual__main a{
+  border: 1px solid #f00;
+}
+ */
+    .visual__anchor,
+    .visual__main,
+    .visual__nav {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .visual__anchor {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .visual__main a,
+    .visual__nav a {
+      flex-grow: 1;
+    }
+
+    /* 主視覺 */
+    .visual__main {
+      height: 100%;
+    }
+
+    .visual__main a:nth-child(1) {
+      flex-grow: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 自適應banner組 */
+    .banner__wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .banner__item {
+      transition: all 0.3s;
+    }
+
+    .banner__item img {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 961px) {
+      .banner__item img {
+        height: 367px;
+      }
+    }
+
+    .bn-w4m2 .banner__item {
+      flex: 1 0 25%;
+    }
+
+    /* hover動畫 */
+    .bn-w4m2 .banner__item:hover,
+    .bn-w4m2 .banner__item:active {
+      transform: scale(1.05);
+      filter: brightness(115%);
+    }
+
+    /* 設定手機時一列2個 */
+    @media screen and (max-width: 960px) {
+      .bn-w4m2 .banner__item {
+        flex: 1 0 50%;
+      }
+    }
+
+    /*main層*/
+    .visual__main a.incentive__layer--1 {
+      position: absolute;
+      width: 50vw;
+      height: 23vw;
+      top: 66vw;
+    }
+
+    .visual__main a.incentive__01--1 {
+      left: 0;
+    }
+
+    .visual__main a.incentive__01--2 {
+      left: 50%;
+    }
+
+    /*品牌層*/
+    .visual__main a.incentive__layer--2 {
+      position: absolute;
+      top: 15.5vw;
+      width: 22.5vw;
+      height: 28vw;
+    }
+
+    .visual__main a.incentive__layer--3 {
+      position: absolute;
+      top: 44vw;
+      width: 22.5vw;
+      height: 28vw;
+    }
+
+    .visual__main a.incentive__02--1,
+    .visual__main a.incentive__03--1 {
+      left: 5vw;
+    }
+
+    .visual__main a.incentive__02--2,
+    .visual__main a.incentive__03--2 {
+      left: 28vw;
+    }
+
+    .visual__main a.incentive__02--3,
+    .visual__main a.incentive__03--3 {
+      left: 50.5vw;
+    }
+
+    .visual__main a.incentive__02--4,
+    .visual__main a.incentive__03--4 {
+      left: 73vw;
+    }
+
+    @media screen and (min-width: 960px) {
+
+      /*main層*/
+      .visual__main a.incentive__layer--1 {
+        position: absolute;
+        top: 629px;
+        width: 465px;
+        height: 220px;
+      }
+
+      .visual__main a.incentive__01--1 {
+        left: calc(50% - 463px);
+      }
+
+      .visual__main a.incentive__01--2 {
+        left: calc(50% + 3px);
+      }
+
+      /*品牌層*/
+      .visual__main a.incentive__layer--2 {
+        position: absolute;
+        top: 160px;
+        width: 210px;
+        height: 260px;
+      }
+
+      .visual__main a.incentive__layer--3 {
+        position: absolute;
+        top: 430px;
+        width: 210px;
+        height: 260px;
+      }
+
+      .visual__main a.incentive__02--1,
+      .visual__main a.incentive__03--1 {
+        left: calc(50% - 427px);
+      }
+
+      .visual__main a.incentive__02--2,
+      .visual__main a.incentive__03--2 {
+        left: calc(50% - 207px);
+      }
+
+      .visual__main a.incentive__02--3,
+      .visual__main a.incentive__03--3 {
+        left: calc(50% + 8px);
+      }
+
+      .visual__main a.incentive__02--4,
+      .visual__main a.incentive__03--4 {
+        left: calc(50% + 224px);
+      }
+    }
+
+    /* 動畫 */
+    .animate__wrap {
+      position: relative;
+      z-index: 2;
+    }
+
+    .animate__wrap .animate__obj--1 {
+      position: absolute;
+      top: 24.3vw;
+      left: 40.5vw;
+      width: 40%;
+    }
+    .animate__wrap .animate__obj--2 {
+      position: absolute;
+      top: 17.4vw;
+      left: 95.2vw;
+      width: 4%;
+      transform-origin: 100% 0;
+      animation: lightning .5s ease-in 2,lightning .5s 2s ease-in 2;
+    }
+
+    @media screen and (min-width: 960px) {
+      .animate__wrap .animate__obj--1 {
+        top: 229px;
+        left: calc(50% - 102px);
+        width: auto;
+        transition: all 0.3s;
+      }
+      .animate__wrap .animate__obj--2 {
+        
+        top: 167px;
+        left: calc(50% - -426px);
+        width: auto;
+        transition: all 0.3s;
+      }
+    }
+
+    @keyframes lightning {
+      0%{
+        transform: scale(0);
+      }
+      80%{
+        transform: scale(1.1);
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+    .visual__anchor,
+    .visual__main,
+    .visual__nav {
+      -js-display: flex;
+    }
+
+    .visual__anchor {
+      position: absolute !important;
+      height: 114.28% \ ;
+    }
+
+    .visual__main a,
+    .visual__nav a {
+      background-color: rgba(0, 0, 0, .0);
+      /*height: 100% !important \ ;*/
+    }
+
+    .build__anchor {
+      -js-display: flex;
+    }
+
+    .build-nav__item {
+      width: 12.5% \ ;
+    }
+
+    .banner__wrap {
+      -js-display: flex;
+      width: 100% \ ;
+    }
+
+    .bn-w2m1 .banner__item {
+      width: 50% \ ;
+    }
+
+    .bn-w4m2 .banner__item {
+      width: 25% \ ;
+    }
+
+    .bn-w2m1.item--3 li:last-child {
+      width: 100% \ ;
+    }
+
+    .bn-w3m1 .banner__item {
+      width: 33.33% \ ;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .bn-w2m1 .banner__item {
+        width: 100% \ ;
+      }
+
+      .bn-w4m2 .banner__item {
+        width: 50% \ ;
+      }
+
+      .bn-w3m1 .banner__item {
+        width: 100% \ ;
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      .deco {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<div id="spWrap" class="sp__wallper">
+  <!-- 主視覺 -->
+  <div class="sp--960 icon_Home">
+    <div id="iconHome"></div>
+  </div>
+  <main class="sp__main">
+    <div class="sp--960">
+      <a href="https://www.etmall.com.tw"><img class="logo-sp" src="ehs-logo.png" alt="東森購物" title="東森購物"></a>
+      <div class="animate__wrap">
+        <img class="animate__obj--1 animate__animated animate__tada animate__infinite" src="kv.png" alt="80%" title="80%">
+        <img class="animate__obj--2" src="ani_01.png" alt="閃電" title="閃電">
+      </div>
+      <div class="sp__visual">
+        <div class="visual__anchor">
+          <div class="visual__main">
+            <!--                    <a class="incentive__layer--1 incentive__01--1" href=""></a>
+                        <a class="incentive__layer--1 incentive__01--2" href=""></a>-->
+          </div>
+        </div>
+        <img src="bg-kv.png">
+      </div>
+    </div>
+    <section class="sp--960 bn-w4m2">
+      <ul class="banner__wrap banner__wrap__top">
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/15837/m/index.html">
+            <img src="pd1.png" alt="美妝館" title="美妝館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/10765/m/index.html">
+            <img src="pd2.png" alt="家電館" title="家電館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/15328/m/index.html">
+            <img src="pd3.png" alt="休閒館" title="休閒館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/16039/m/index.html">
+            <img src="pd4.png" alt="保健館" title="保健館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="#">
+            <img src="pd5.png" alt="服飾內衣" title="服飾內衣">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/16026/m/index.html">
+            <img src="pd6.png" alt="日用館" title="日用館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/15839/m/index.html">
+            <img src="pd7.png" alt="傢寢館" title="傢寢館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/16076/m/index.html">
+            <img src="pd8.png" alt="美食館" title="美食館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/15819/m/index.html">
+            <img src="pd9.png" alt="精品鞋包" title="精品鞋包">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/16130/m/index.html">
+            <img src="pd10.png" alt="餐廚館" title="餐廚館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/16016/m/index.html">
+            <img src="pd11.png" alt="婦幼館" title="婦幼館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/15808/m/index.html">
+            <img src="pd12.png" alt="寵物館" title="寵物館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/16055/m/index.html">
+            <img src="pd13.png" alt="3C館" title="3C館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="https://media.etmall.com.tw/sp/13545/m/index.html">
+            <img src="pd14.png" alt="數位館" title="數位館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="#">
+            <img src="pd15.png" alt="手機館" title="手機館">
+          </a>
+        </li>
+        <li class="banner__item">
+          <a href="#">
+            <img src="pd16.png" alt="APPLE館" title="APPLE館">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+<script src="https://www.etmall.com.tw/Scripts/lib/jquery/jquery-2.2.0.min.js"></script>
+<script>$('a[href^="#"]').on('click', function (e) {
+    var target = $('a[name=' + this.getAttribute('href').split('#')[1] + ']');
+    if (target.length) {
+      e.preventDefault();
+      $('html,body').stop().animate({ scrollTop: target.offset().top }, 500);
+    }
+  });</script>
+<!-- 浮水印 -->
+<script id="scriptIconFloat"
+  src="https://www.etmall.com.tw/XML/content/DMSetting/Final/209901/SP_1105264/float-icon.js"></script>
+<!--[if IE 9]>
+<script src="flexibility.js"></script>
+<script>flexibility(document.documentElement);</script>
+<![endif]-->
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ============== 輪播css ============== -->
+  <link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/swiper.min.css">
+<!-- ============== 共用css ============== -->
+  <link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/animate.min.css">
+  <link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/generate_v1.3.1.css">
+
+  <!-- [電梯步驟1] 電梯CSS 不用就關掉 -->
+  <!-- 商品左電梯CSS，要使用還要在步驟2開啟左電梯data資料 -->
+  <!-- <link id="localElevatorLeft" rel="stylesheet" href="sp-elevator-left.css"> -->
+
+  <!-- 商品右電梯CSS，步驟2有測試div可以測試 -->
+  <link id="localElevatorRight" rel="stylesheet" href="sp-elevator-right.css">
+  <!-- [電梯步驟1] 電梯CSS END -->
+
+  <!-- 背景特效區塊的css -->
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+
+  <style>
+
+    body {
+      position: relative;
+    /* 背景顏色 */
+      background-color: #accf98;
+    }
+
+    body:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(bg-m.jpg) center 0 no-repeat;
+      background-size: 100%;
+    }
+
+    @media screen and (min-width:960px) {
+      body:before {
+        background: url(bg.jpg) center 0 no-repeat;
+        background-size: auto;
+      }
+    }
+
+    body.bg-fixed:before {
+      position: fixed;
+      height: 100vh;
+    }
+
+    /* 調整logo位置大小 */
+    /* .logo {
+      top: 1%;
+      left: 1%;
+      width: 30%;
+      max-width: 220px;
+    } */
+
+      /* 連結測試 */
+      /* .sp__visual a{
+        filter: brightness(500%);
+      } */
+
+      /* 切片測試 */
+      /* .visual__fragment::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #00f;
+        pointer-events: none;
+      } */
+
+    /* --- 動畫小物件 --- */
+    .animate__wrap {
+      position: relative;
+      z-index: 1;
+      transform: translateZ(0);
+    }
+
+    /*-- 手機版：設定物件距離左邊與上邊的位置，單位可以使用"%"或"vw";width:建議電腦版可以使用auto，手機版則可使用%調整 --*/
+    .animate__wrap .animate__obj--01 {
+      position: absolute;
+      z-index: -1;
+      top: 10.2vw;
+      left: 22vw;
+      width: 36%;
+    }
+
+    /*-- 電腦版：設定物件距離左邊與上邊的位置，單位可以使用"px"，左邊可以挑整clac()後面的px值;width:建議電腦版可以使用auto，手機版則可使用%調整 --*/
+    @media screen and (min-width:960px) {
+      .animate__wrap .animate__obj--01 {
+        top: 112px;
+        left: calc(50% - 250px);
+        width: auto;
+      }
+    }
+    /* --- 動畫小物件 end --- */
+  </style>
+</head>
+
+<!-- 是否要固定背景，不要就拿掉class -->
+<body class="bg-fixed">
+
+  <div class="navRightBar" id="navRightBar"></div>
+  <div class="elevatorHome js--main--dialog" id="elevatorHome"></div>
+  <div id="barHome"></div>
+  <div class="home--icon layout--main" id="iconHome"></div>
+
+  <div class="sp__wallper" id="spWrap">
+    </div>
+    <main class="sp__main">
+      <div class="layout--main home--logo">
+        <a href="https://www.u-mall.com.tw/"><img class="logo" src="umall-logo.png" alt="森森購物"></a>
+      </div>
+
+      <section class="sp__visual">
+        <div class="layout--main">
+          <ul class="visual--auto clearfix" >
+            <li class="visual__fragment width--auto"><img src="index_01.png" alt="不要迷戀姐"></li>
+            <li class="visual__fragment width--auto"><a href="https://www.u-mall.com.tw/i/3473683"><img src="index_02.png" alt="無痕內衣"></a></li>
+            <li class="visual__fragment width--auto"><a href="https://www.u-mall.com.tw/i/3593992"><img src="index_03.png" alt="珂潤乳霜"></a></li>
+            <li class="visual__fragment width--auto"><a href="https://www.u-mall.com.tw/i/3574264"><img src="index_04.png" alt="醇耀妍濃萃飲"></a></li>
+            <li class="visual__fragment width--auto"><a href="https://www.u-mall.com.tw/i/3427193"><img src="index_05.png" alt="綠茶中性淡香水"></a></li>
+            <li class="visual__fragment width--auto"><a href="https://www.u-mall.com.tw/i/3597722"><img src="index_06.png" alt="纖美香橙瑪黛茶"></a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <!-- ============== 共用JS ============== -->
+  <script src="https://media.etmall.com.tw/sp/12500/jquery-3.6.0.min.js"></script>
+  <script id="generateScript" src="https://media.etmall.com.tw/sp/12500/generate_v1.2.js"></script>
+
+  <!--[電梯步驟2] 電梯 JS -->
+  <!-- 商品左電梯單機版資料，不用就關掉，要使用還要上方步驟1開啟商品左電梯CSS -->
+  <!-- <script id="dataElevatorLeft" src="data-elevator.js"></script> -->
+
+  <!-- 線上自動切換電梯，無論如何都要有 -->
+  <script id="checkElevator" src="https://media.etmall.com.tw/sp/11911/check-elevator.js"></script>
+  <!-- [電梯步驟2] 電梯 JS END -->
+
+  <!-- [測試區] -->
+  <!-- 測試商品右電梯用，上線前必須關掉-->
+  <!-- <div data-title="ccc"></div> -->
+  <!-- 測試霸道電梯用，開啟時上方自動切換電梯要關閉，這支正式上線時需關閉、上方的要開啟回來 -->
+  <!-- <script id="checkElevator" src="https://media.etmall.com.tw/sp/14841/test-elevator.js?87"></script> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+// 色票
+$primary: #688dc4;
+$bg: #f4f1dc;
+$accent-bg: #2457ad;
+$card-bg: #fff;
+$logo: #f3cd90;
+$btn: #f8b037;
+$btn-hover: #d28012;
+$text-btn: #fff;
+$text-nav: #f4f1dc;
+$text: #121212;
+$text-title: #2457ad;
+$text-sub: #555555;
+$timeline: #121212;
+$gradient: linear-gradient(to right, $bg 50%, $primary);
+
+//載入動畫色票
+$duck-eyes: #2457ad;
+$duck-body: #f4f1dc;
+$duck-body-shadow: #dbd4a5;
+$duck-mouth: #f8b037;
+$duck-mouth-shadow: #d28012;
+
+//尺寸
+$text-size: clamp(1.5vh, 16px, 3.5vw);
+$nav-height: Min(20vw, 100px);
+$view-max-width: 1024px;
+$btn-x-padding: calc(#{$text-size}/ 2);
+$btn-y-padding: calc(#{$text-size}* 2);
+$btn-width: 10em;
+$gap: Min(5vw, 5vh);
+$card-padding: Min(3vw, 1em);
+$card-radius: Min(5vw, 1em);
+$card-icon-width: Min(25vw, 10em);
+$card-icon-height: $card-icon-width/2;
+$skill-picture-width: 15em;

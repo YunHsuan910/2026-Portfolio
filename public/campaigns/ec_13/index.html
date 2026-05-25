@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- ============== 輪播css ============== -->
+  <link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/swiper.min.css" />
+  <!-- ============== 共用css ============== -->
+  <link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/animate.min.css" />
+  <link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/generate_v1.5.5.css"/>
+  <link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/build.css" />
+
+  <!-- [電梯步驟1] 電梯CSS 不用就關掉 -->
+  <!-- 商品左電梯CSS，要使用還要在步驟2開啟左電梯data資料 -->
+  <!-- <link id="localElevatorLeft" rel="stylesheet" href="sp-elevator-left.css"> -->
+
+  <!-- 商品右電梯CSS，步驟2有測試div可以測試 -->
+  <link id="localElevatorRight" rel="stylesheet" href="sp-elevator-right.css" />
+  <!-- [電梯步驟1] 電梯CSS END -->
+
+  <style>
+    body {
+      background-color: #670014;
+    }
+
+    body:before {
+      background: url(bg-m.jpg) center 0 no-repeat;
+      background-size: 100%;
+    }
+
+    @media screen and (min-width: 960px) {
+      body:before {
+        background: url(bg.jpg) center 0 no-repeat;
+        background-size: auto;
+      }
+    }
+
+    /* 調整logo位置大小 */
+    /* .logo {
+        top: 1%;
+        left: 1%;
+        width: 30%;
+        max-width: 220px;
+      } */
+
+    /* --- 動畫小物件 --- */
+    .animate__wrap {
+      z-index: 1;
+    }
+    .animate__wrap--02 {
+      z-index: -1;
+    }
+
+    /*-- 手機版：設定物件距離左邊與上邊的位置，單位可以使用"%"或"vw";width:建議電腦版可以使用auto，手機版則可使用%調整 --*/
+    .animate__wrap .animate__obj--01 {
+      position: absolute;
+      z-index: -1;
+      top: 10.2vw;
+      left: 0.6vw;
+      width: 63.3%;
+    }
+    .animate__wrap--02 .animate__obj--02 {
+      position: absolute;
+      z-index: -1;
+      top: 0vw;
+      left: 33.6vw;
+      width: 66.3%;
+      pointer-events: none;
+    }
+
+    /*-- 電腦版：設定物件距離左邊與上邊的位置，單位可以使用"px"，左邊可以挑整clac()後面的px值;width:建議電腦版可以使用auto，手機版則可使用%調整 --*/
+    @media screen and (min-width: 960px) {
+      .animate__wrap .animate__obj--01 {
+        top: 95px;
+        left: calc(50% - 478px);
+        width: auto;
+      }
+      .animate__wrap--02 .animate__obj--02 {
+        top: -1px;
+        left: calc(50% - 147px);
+        width: auto;
+      }
+    }
+
+    /* --- 動畫小物件 end --- */
+
+    /* --- 滑動Banner start --- */
+    .banner__slider {
+      /* 輪播的父層 */
+      z-index: 0;
+    }
+
+    .banner__slider .swipersty__pp {
+      position: absolute;
+      z-index: 0;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+    }
+    .swiper-2-link{
+      position: absolute;
+      width: 50%;
+      height: 100%;
+    }
+    .right-link{
+      left: 50%;
+    }
+
+      .banner__slider .swipersty__banner {
+        position: absolute;
+        z-index: 0;
+        top: 21.5%;
+        left: 12%;
+        width: 76%;
+      }
+    /* --- 滑動Banner end --- */
+
+    /* --- 小網下電梯換色 start--- */
+    @media screen and (max-width: 1213px){
+      .footer__box .footer__ul {
+          /* 小網下電梯底色 */
+          /* background-color: #ff5ccf; */
+          /* 小網下電梯上邊底色 */
+          /* border-top: 4px solid #fff; */
+      }
+      .footer__box li p{
+        /* 小網下電梯文字顏色 */
+        /* color: #fff; */
+      }
+    }
+
+    @media screen and (min-width: 1213px){
+      .sp-right__nav a{
+        /* 大網右電梯文字顏色 */
+        /* color: #000; */
+      }
+      .sp-right__nav li a.active, .sp-right__nav a:hover{
+        /* 大網右電梯文字hover顏色 */
+        /* color: #d10001; */
+      }
+      .sp-right__nav li a.active:after, .sp-right__nav a:hover:after{
+        /* 大網右電梯TITLE圈圈的hover顏色 */
+
+        /* border: 3px solid #d10001; */
+      }
+    }
+    /* --- 電梯換色 end--- */
+
+  </style>
+</head>
+<!-- 是否要固定背景，不要就拿掉class -->
+
+<body class="bg-fixed">
+  <div class="navRightBar" id="navRightBar"></div>
+  <div class="elevatorHome js--main--dialog" id="elevatorHome"></div>
+  <div id="barHome"></div>
+  <div class="home--icon layout--main" id="iconHome"></div>
+
+  <div class="sp__wallper" id="spWrap">
+    <!-- ====== 背景飄落 start ====== -->
+    <div class="bg__container">
+      <!-- ====== 背景動畫 == ==== -->
+      <div class="falling__layer">
+        <div class="falling__block bg--first"></div>
+        <div class="falling__block bg--second"></div>
+        <div class="falling__block bg--third"></div>
+      </div>
+
+      <!-- ====== 圖片隨機動畫 == ==== -->
+      <div class="random__layer">
+        <div class="random__block"></div>
+      </div>
+    </div>
+    <!-- ====== 背景飄落 end ====== -->
+
+    <div class="animate__wrap--02">
+      <img class="animate__animated animate__obj--02" src="model.png" />
+    </div>
+    <div class="animate__wrap">
+        <img class="animate__animated animate__obj--01" src="title.png" />
+    </div>
+
+    <main class="sp__main">
+      <div class="layout--main home--logo">
+        <a href="https://www.etmall.com.tw"><img class="logo" src="ehs-logo.png" alt="東森購物" /></a>
+      </div>
+
+      <section class="sp__visual">
+        <div class="layout--main">
+          <ul class="visual--auto clearfix">
+            <li class="visual__fragment width--auto">
+              <img src="index_01.png" alt="美力全開" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="banner__slider">
+    <div class="layout--main">
+      <ul class="visual--auto clearfix">
+        <li class="visual__fragment width--auto">
+          <img src="index_02.png" alt="底圖" />
+        </li>
+      </ul>
+      <div class="swipersty__pp">
+        <div class="swiper-container" id="swiperstyProduct">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a class="swiper-2-link left-link" href="#" title="資生堂"></a>
+              <a class="swiper-2-link right-link" href="#" title="雅詩蘭黛"></a>
+              <img src="index_02-1.png" />
+            </li>
+            <li class="swiper-slide">
+              <a class="swiper-2-link left-link" href="#" title="SK-II"></a>
+              <a class="swiper-2-link right-link" href="#" title="蘭蔻"></a>
+              <img src="index_02-2.png" />
+            </li>
+            <li class="swiper-slide">
+              <a href="#" title="雅頓">
+                <img src="index_02-3.png" />
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+      <section class="sp__visual">
+      <div class="layout--main">
+        <ul class="visual--auto clearfix">
+          <li class="visual__fragment width--auto">
+            <img src="index_03.png" alt="週年慶搶購攻略" />
+          </li>
+          <li class="visual__fragment width--auto">
+            <img src="index_04.png" alt="最高回饋60%" />
+          </li>
+          <li class="visual__fragment width--auto">
+            <a href="#"><img src="index_05.png" alt="9月銀行/支付" /></a>
+          </li>
+          <li class="visual__fragment width--auto">
+            <a href="#"><img src="index_06.png" alt="指定滿$1,999登記送" /></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="banner__slider">
+      <div class="layout--main">
+        <ul class="visual--auto clearfix">
+          <li class="visual__fragment width--auto"><img src="index_07.png" alt="霸氣強檔推薦"></li>
+        </ul>
+        <div class="swipersty__banner">
+          <div class="swiper-container" id="swiperstyBanner">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide"><a href="#" title="第一個banner"><img src="750x328_1.jpg" alt="第一個banner"></a></li>
+              <li class="swiper-slide"><a href="#" title="第二個banner"><img src="750x328_2.jpg" alt="第二個banner"></a></li>
+              <li class="swiper-slide"><a href="#" title="第三個banner"><img src="750x328_3.jpg" alt="第三個banner"></a></li>
+              <li class="swiper-slide"><a href="#" title="第四個banner"><img src="750x328_4.jpg" alt="第四個banner"></a></li>
+              <li class="swiper-slide"><a href="#" title="第五個banner"><img src="750x328_5.jpg" alt="第五個banner"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sp__visual">
+  <div class="layout--main">
+    <ul class="visual--auto clearfix">
+      <li class="visual__fragment width--auto">
+        <img src="index_08.png" alt="派對狂歡 搶購不手軟" />
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_09.png" alt="資生堂" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_10.png" alt="雅詩蘭黛" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_11.png" alt="SK-II" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_12.png" alt="蘭蔻" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_13.png" alt="契爾氏" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_14.png" alt="雅頓" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_15.png" alt="OZIO歐姬兒" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_16.png" alt="MG" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_17.png" alt="森美妍" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_18.png" alt="BIOUP" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_19.png" alt="DeMon" /></a>
+      </li>
+      <li class="visual__fragment width--auto">
+        <a href="#"><img src="index_20.png" alt="TOP品牌慶" /></a>
+      </li>
+    </ul>
+  </div>
+</section>
+    </main>
+  <!-- ============== 共用JS ============== -->
+  <script src="https://media.etmall.com.tw/sp/12500/jquery-3.6.0.min.js"></script>
+  <script src="https://media.etmall.com.tw/sp/12500/generate_v1.5.5.js"></script>
+  <!--[電梯步驟2] 電梯 JS -->
+  <!-- 商品左電梯單機版資料，不用就關掉，要使用還要上方步驟1開啟商品左電梯CSS -->
+  <!-- <script id="dataElevatorLeft" src="data-elevator.js"></script> -->
+
+  <!-- 線上自動切換電梯，無論如何都要有 -->
+  <script id="checkElevator" src="https://media.etmall.com.tw/sp/11911/check-elevator.js"></script>
+  <!-- [電梯步驟2] 電梯 JS END -->
+
+  <!-- [測試區] -->
+  <!-- 測試商品右電梯用，上線前必須關掉 -->
+  <!-- <div data-title="ccc"></div> -->
+  <!-- 測試霸道電梯用，開啟時上方自動切換電梯要關閉，這支正式上線時需關閉、上方的要開啟回來 -->
+  <!-- <script id="checkElevator" src="https://media.etmall.com.tw/sp/14841/test-elevator.js?87"></script> -->
+
+  <!-- ============== 滾動動畫 start ============== -->
+  <script src="wow.min.js"></script>
+
+  <script>
+    new WOW().init();
+  </script>
+  <!-- ============== 滾動動畫 end ============== -->
+
+  <!-- ============== 輪播 start ============== -->
+  <script src="https://media.etmall.com.tw/sp/12500/swiper.min.js"></script>
+  <script>
+    var swiperstyProduct = new Swiper("#swiperstyProduct", {
+      autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
+          fadeEffect: {
+          crossFade: true
+        },
+        grabCursor: true,
+        loop: true,
+        speed: 1000,
+        perspective: true,
+    });
+
+  </script>
+  <script>
+
+    var promoSliderItem = new Swiper('#swiperstyBanner', {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      grabCursor: true,
+      lazy: {
+        loadPrevNext: true,
+      },
+      loop: true,
+      perspective: true,
+      // effect: "flip",
+      // flipEffect: {
+      //   slideShadows: false,
+      // },
+      slidesPerView: 1,
+      speed: 600,
+      watchSlidesProgress : true,
+      watchSlidesVisibility : true,
+    } );
+  </script>
+  <!-- ============== 輪播 end ============== -->
+</body>
+
+</html>

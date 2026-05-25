@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>女王的衣帽間</title>
+    <!-- ============== 輪播css ============== -->
+    <link
+      rel="stylesheet"
+      href="https://media.etmall.com.tw/sp/12500/swiper.min.css"
+    />
+    <!-- ============== 共用css ============== -->
+    <link
+      rel="stylesheet"
+      href="https://media.etmall.com.tw/sp/12500/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://media.etmall.com.tw/sp/12500/generate_v1.5.5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://media.etmall.com.tw/sp/12500/build.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      img {
+        width: 100%;
+        border: 0;
+      }
+      article,
+      main,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        margin: 0;
+        font-family:
+          PingFangTC-regular,
+          "LiHei Pro",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          "Source Han Sans TC",
+          "Microsoft JhengHei",
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji";
+        background-color: #b20043;
+      }
+      .body-color {
+        /* 外部背景底色 */
+        background-color: #b20043;
+      }
+      .sp--960 {
+        position: relative;
+        z-index: 0;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* -- 主遊戲區開始 -- */
+      .clickToPlay {
+        cursor: pointer;
+      }
+      .chance {
+        position: relative;
+      }
+      .chance .chanceNum {
+        position: absolute;
+        top: 48%;
+        left: 44.5%;
+        transform: translate(-50%, -50%);
+        font-size: Min(5em, 8vw);
+        color: #b20043;
+      }
+      .layout--award {
+        display: none;
+      }
+      .layout--award.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100dvw;
+        height: 100dvh;
+        z-index: 999;
+      }
+      .layout--award .btn {
+        width: 10em;
+        margin: 1em auto 0;
+        background-color: #5241de;
+        color: #fff;
+        border-radius: 99em;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .layout--award .btn:hover {
+        background-color: #7d56f8;
+        color: #ffe765;
+      }
+      .awardRecord {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        margin: 0 1em 2vw;
+        background-color: #fff;
+        border-radius: 1em;
+        font-size: 1em;
+        color: #000;
+        text-align: center;
+      }
+      /* -- 主遊戲區結束 -- */
+    </style>
+  </head>
+  <body>
+    <div id="spWrap" class="sp__wallper">
+      <main class="sp__main">
+        <section class="sp__visual">
+          <div class="layout--main">
+            <ul class="visual--auto clearfix">
+              <li class="visual__fragment width--auto">
+                <img src="layout/960_版頭.jpg" alt=" " />
+              </li>
+              <li class="visual__fragment width--auto chance">
+                <div class="chanceNum">∞</div>
+                <img src="layout/960_抽獎機會.jpg" alt=" " />
+              </li>
+              <li
+                id="clickToPlay"
+                class="visual__fragment width--auto clickToPlay"
+                onclick="
+                  scrollToSection('clickToPlay');
+                  handleClick();
+                "
+              >
+                <img
+                  id="clickImg"
+                  class="clickImg"
+                  src="layout/960_點擊前.gif"
+                  alt=" "
+                />
+              </li>
+              <li class="visual__fragment width--auto">
+                <img src="layout/960_bar.jpg" alt=" " />
+                <div id="awardRecord" class="awardRecord">
+                  目前尚未有得獎紀錄
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="award" class="layout--award">
+            <div
+              style="
+                position: relative;
+                max-width: 600px;
+                margin: 15dvh auto 0;
+                padding: 20px;
+                text-align: center;
+              "
+            >
+              <!-- 獎項圖片 -->
+              <img
+                id="awardImg"
+                src=""
+                alt="中獎獎項"
+                style="max-width: 250px; display: block; margin: 0 auto"
+              />
+
+              <!-- 獎項文字內容 -->
+              <h3
+                id="awardContent"
+                style="
+                  color: #fff;
+                  margin-top: 15px;
+                  font-size: 24px;
+                  letter-spacing: 1px;
+                "
+              ></h3>
+
+              <div class="btn" onclick="closeAward()">再玩一次</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const clickToPlay = document.querySelector("#clickToPlay");
+      const clickImg = document.querySelector("#clickImg");
+      const award = document.querySelector("#award");
+      const awardImg = document.querySelector("#awardImg");
+      const awardContent = document.querySelector("#awardContent");
+      const awardRecord = document.querySelector("#awardRecord");
+
+      // 獎項
+      const awardPool = {
+        award1: { src: "award/250x300_01.jpg", content: "388枚東森幣" },
+        award2: { src: "award/250x300_02.jpg", content: "99枚東森幣" },
+        award3: { src: "award/250x300_03.jpg", content: "38枚東森幣" },
+        award4: { src: "award/250x300_04.jpg", content: "388枚樂透金" },
+        award5: { src: "award/250x300_05.jpg", content: "38枚樂透金" },
+        award6: { src: "award/250x300_06.jpg", content: "16枚樂透金" },
+      };
+      //點擊後，先出現動畫，後隨機出現獎項
+      function handleClick() {
+        // 避免重複點擊
+        clickToPlay.style.pointerEvents = "none";
+        // 避免背景滾動
+        document.body.style.overflow = "hidden";
+
+        // 更換動畫圖片
+        clickImg.attributes[2].nodeValue = "layout/960_點擊後.gif";
+
+        const awardsArray = Object.values(awardPool);
+
+        // 隨機決定中獎索引 (0 ~ 5)
+        const randomIndex = Math.floor(Math.random() * awardsArray.length);
+
+        // 取得中獎的獎項物件
+        const luckyAward = awardsArray[randomIndex];
+
+        // 塞入圖片路徑、圖片 alt 說明與畫面文字
+        awardImg.src = luckyAward.src;
+        awardImg.alt = luckyAward.content;
+        awardContent.textContent = `恭喜獲得：${luckyAward.content}`;
+
+        // 2秒後出現獎項
+        const timerId = setTimeout(() => {
+          award.classList.add("active");
+          // 填寫中獎紀錄
+          if (awardRecord.textContent.trim() === "目前尚未有得獎紀錄") {
+            awardRecord.innerHTML = "";
+          }
+          awardRecord.innerHTML += `${luckyAward.content}<br />`;
+        }, 2000);
+      }
+
+      // 關閉獎項彈窗的函式
+      function closeAward() {
+        award.classList.remove("active");
+        document.body.style.overflow = "auto";
+
+        // 還原點擊前的狀態，讓使用者可以再玩一次
+        clickImg.attributes[2].nodeValue = "layout/960_點擊前.gif";
+        clickToPlay.style.pointerEvents = "auto";
+      }
+
+      // 捲動到特定區域的函式
+      function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth", // 平滑捲動
+            block: "center", // 對齊區塊頂部
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+@import "variables";
+@import "animation";
+//圖片設定開始
+img {
+    width: 100%;
+    height: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+//圖片設定結束
+
+//文字設定開始
+.navItem {
+    text-align: center;
+    color: $text-nav;
+    fill: $text-nav;
+    font-size: $text-size;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+        color: $logo;
+        fill: $logo;
+    }
+}
+.headline {
+    display: grid;
+    place-items: center;
+    letter-spacing: 2px;
+    margin-top: $gap;
+    .title {
+        color: $text-title;
+        font-size: calc(#{$text-size}* 2);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .subtitle {
+        color: $text-title;
+        font-size: $text-size;
+        font-weight: bold;
+    }
+}
+.title {
+    color: $text-title;
+    font-size: calc(#{$text-size}* 1.5);
+    line-height: calc(#{$text-size}* 2.5);
+}
+p {
+    color: $text;
+    font-size: $text-size;
+    line-height: calc(#{$text-size}* 1.5);
+    margin: 0;
+}
+span {
+    color: $text-sub;
+    font-size: $text-size;
+    line-height: calc(#{$text-size}* 1.5);
+}
+.textBold {
+    font-weight: bold;
+}
+.copyright {
+    color: rgba($color: $text-nav, $alpha: 0.3);
+    font-size: calc(#{$text-size}* 0.7);
+    letter-spacing: 1px;
+}
+//文字設定結束
+
+//按鈕設定開始
+.btn {
+    display: grid;
+    place-items: center;
+    background-color: $btn;
+    color: $text-btn;
+    text-align: center;
+    border-radius: 99em;
+    transition: all 0.2s;
+    padding: $btn-x-padding $btn-y-padding;
+    max-width: $btn-width;
+    cursor: pointer;
+    &:hover {
+        background-color: $btn-hover;
+    }
+}
+//按鈕設定結束
