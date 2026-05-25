@@ -53,7 +53,7 @@ function Details() {
         <motion.section
           className="section sectionL"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={fadeInVariant}
         >
           <div className="mobile">
@@ -93,7 +93,7 @@ function Details() {
         <motion.section
           className="section sectionR"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={fadeInVariant}
         >
           <div className="text">
@@ -126,7 +126,7 @@ function Details() {
         <motion.section
           className="section"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={fadeInVariant}
         >
           <div className="text">

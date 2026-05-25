@@ -16,6 +16,7 @@ body {
     // height: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Noto Sans CJK TC", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .app-wrapper {
     display: flex;
@@ -385,8 +386,8 @@ body {
                 }
                 .textWrap {
                     margin-left: calc(#{$gap}/ 2);
-                    opacity: 0;
-                    transform: translateY(30px);
+                    // opacity: 0;
+                    // transform: translateY(30px);
 
                     .time {
                         color: $text-title;
@@ -598,8 +599,8 @@ body {
         margin-top: calc(#{$gap} + #{$nav-height}/ 2);
         .project {
             margin-bottom: calc(#{$gap}* 2);
-            opacity: 0;
-            transform: translateY(30px);
+            // opacity: 0;
+            // transform: translateY(30px);
             animation: fadeIn ease-in 0.6s;
 
             &:last-of-type {
@@ -812,8 +813,8 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        opacity: 0;
-        transform: translateY(30px);
+        // opacity: 0;
+        // transform: translateY(30px);
         animation: fadeIn ease-in 0.6s;
         .mobile {
             position: relative;
