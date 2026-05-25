@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/2026-Portfolio">
       <ScrollToTop />
       <div className="app-wrapper">
         <Navbar />
