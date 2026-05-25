@@ -132,6 +132,9 @@ body {
     // Loading頁面開始
     .logo {
         position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         margin: 0 auto;
         width: 100%;
         max-width: 20vh;
@@ -215,7 +218,7 @@ body {
     }
     .categories {
         max-width: $view-max-width;
-        margin-top: Min(5vw, 1em);
+        margin: Min(5vw, 1em) auto 0;
         display: flex;
         flex-wrap: nowrap;
         padding: 0 $gap;
@@ -239,6 +242,7 @@ body {
                 place-items: center;
                 background-color: $card-bg;
                 border-radius: 99em 99em 0 0;
+                margin: 0 auto;
                 img {
                     width: 40%;
                     object-fit: contain;
@@ -399,6 +403,7 @@ body {
                             color: $text;
                             font-weight: bold;
                             font-size: calc(#{$text-size}* 1.5);
+                            line-height: calc(#{$text-size}* 2);
                         }
                         .name {
                             margin-right: 10px;
@@ -1133,6 +1138,8 @@ body {
             margin-bottom: $gap;
         }
         .content {
+            width: fit-content;
+            margin: 0 auto;
             * {
                 font-size: calc(#{$text-size}* 1.2);
             }

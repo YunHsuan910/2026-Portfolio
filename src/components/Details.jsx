@@ -60,7 +60,7 @@ function Details() {
             <div className="img">
               {getFileType(data.mainImgName) === "mp4" ||
               getFileType(data.mainImgName) === "webm" ? (
-                <video controls autoPlay loop muted>
+                <video controls loop muted>
                   <source
                     src={getImageUrl(data.mainImgName)}
                     type="video/mp4"
@@ -106,7 +106,7 @@ function Details() {
             <div className="img">
               {getFileType(data.subImgName) === "mp4" ||
               getFileType(data.subImgName) === "webm" ? (
-                <video controls autoPlay loop muted>
+                <video controls loop muted>
                   <source src={getImageUrl(data.subImgName)} type="video/mp4" />
                 </video>
               ) : (
@@ -126,7 +126,7 @@ function Details() {
         <motion.section
           className="section"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.6 }}
           variants={fadeInVariant}
         >
           <div className="text">
@@ -139,7 +139,7 @@ function Details() {
             <div className="img">
               {getFileType(data.PcImgName) === "mp4" ||
               getFileType(data.PcImgName) === "webm" ? (
-                <video controls autoPlay loop muted>
+                <video controls loop muted>
                   <source src={getImageUrl(data.PcImgName)} type="video/mp4" />
                 </video>
               ) : (

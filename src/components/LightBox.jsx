@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 function LightBox({ lightbox, closeLightbox }) {
   return (
     <div className="lightboxOverlay" onClick={closeLightbox}>
@@ -22,7 +24,7 @@ function LightBox({ lightbox, closeLightbox }) {
           <div className="infoWrap">
             <div className="title">{lightbox.title}</div>
             {lightbox.url && (
-              <a href={lightbox.url} key={lightbox.id} target="_blank">
+              <a href={`${basePath}${lightbox.url}`} key={lightbox.id} target="_blank">
                 <div className="btn">查看活動頁</div>
               </a>
             )}
