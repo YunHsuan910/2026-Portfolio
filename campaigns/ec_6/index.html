@@ -1,0 +1,179 @@
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- ============== 輪播 start ============== -->
+<link rel="stylesheet" href="https://www.etmall.com.tw/XML/content/DMSetting/Final/209901/SP_1116205/swiper.min.css">
+<!-- ============== 輪播 end ============== -->
+<!-- 共用CSS -->
+ <link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/animate.min.css">
+<link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/generate_v1.2.css">
+<!-- [電梯步驟1] 電梯CSS，非線上版可以在裡面換顏色/圖片名稱 -->
+<link rel="stylesheet" href="sp-elevator.css">
+<!-- [電梯步驟1] 電梯CSS END -->
+<style>
+  body {
+    /* 自行修正背景顏色 */
+    background: url(bg-m.jpg) #111012 center 0 no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+  }
+
+  @media screen and (min-width: 960px) {
+    body {
+      background: url(bg.jpg) #111012 center 0 no-repeat;
+      background-size: 2560px auto;
+      background-attachment: fixed;
+    }
+  }
+
+  /* 調整logo位置大小 */
+  .logo {
+    top: 1%;
+    left: 1%;
+    width: 25%;
+    max-width: 220px;
+  }
+
+  /* 連結測試 */
+  /* .sp__visual a{
+    filter: brightness(500%);
+  } */
+
+  /* 切片測試 */
+  /* .visual__fragment::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #00f;
+    pointer-events: none;
+  } */
+
+  /*-- 動畫小物件 --*/
+  /* ======================================== */
+  .animate__wrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  /*-- 手機版：設定物件距離左邊與上邊的位置，單位可以使用"%"或"vw";width:建議電腦版可以使用auto，手機版則可使用%調整 --*/
+  .animate__wrap .animate__obj--01 {
+    position: absolute;
+    top: 6.5vw;
+    left: 13vw;
+    width: 78%;
+    animation-delay: 1s;
+  }
+  .animate__wrap .animate__obj--02 {
+    position: fixed;
+    top: 40vw;
+    left: -14vw;
+    width: 24%;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+  }
+  .animate__wrap .animate__obj--03 {
+    position: fixed;
+    top: 40vw;
+    left: -14vw;
+    width: 24%;
+    animation-duration: 7s;
+  }
+  /*-- 電腦版：設定物件距離左邊與上邊的位置，單位可以使用"px"，左邊可以挑整clac()後面的px值;width:建議電腦版可以使用auto，手機版則可使用%調整 --*/
+  @media screen and (min-width: 960px) {
+    .animate__wrap .animate__obj--01 {
+      top: 38px;
+      left: calc(50% - 326px);
+      width: 770px;
+    }
+    .animate__wrap .animate__obj--02 {
+      top: 386px;
+      left: calc(50% - 603px);
+      width: auto;
+    }
+    .animate__wrap .animate__obj--03 {
+      top: 46px;
+      left: calc(50% - 843px);
+      width: auto;
+    }
+  }
+
+</style>
+
+<!-- [電梯步驟2] 電梯 html -->
+<!-- 左電梯
+<div class="elevatorHome js--main--dialog" id="elevatorHome"></div> -->
+<!-- 右電梯 -->
+<div class="navRightBar" id="navRightBar" style="display: none;"></div>
+<!-- 右電梯關閉，需打開把display:none拿掉
+  測試右邊電梯是否正確方法：打開 <div data-title="a1"></div>，如果畫面出現a1代表正確，右電梯需要跳錨點連到宮格，請企劃自行在宮格的替代文字裡面填寫文字 -->
+<!-- [電梯步驟2] 電梯 html END -->
+
+<!--<div id="barHome"></div>-->
+<div id="iconHome" class="layout--main home--icon"></div>
+<div id="spWrap" class="sp__wallper">
+  <!-- 動畫小物件 -->
+  <div class="animate__wrap">
+    <!-- 如果有多組物件，可以複製命名animate__obj--0{數字} css 也複製一份就可以一直往下生 -->
+    <img class="animate__animated animate__tada animate__obj--01 animate__infinite" src="ani_01.png" alt="礦老闆來囉">
+  </div>
+  <!-- 主視覺 -->
+  <main class="sp__main">
+    <div class="layout--main home--logo">
+      <a href="https://www.etmall.com.tw"><img class="logo" src="ehs-logo.png" alt="東森購物"></a>
+    </div>
+    <section class="sp__visual">
+      <div class="layout--main">
+        <ul class="visual--auto clearfix">
+          <li class="visual__fragment width--auto">
+            <!-- <img src="index_00.png" title="DIY礦渣超殺特賣" alt="DIY礦渣超殺特賣"> -->
+            <img src="index_01.png" title="DIY礦渣超殺特賣" alt="DIY礦渣超殺特賣">
+          </li>
+          <li class="visual__fragment width--auto">
+            <a href="https://www.etmall.com.tw/i/3366477" title="華碩主機板">
+              <img src="index_02.png" alt="華碩主機板">
+            </a>
+          </li>
+          <li class="visual__fragment width--auto">
+            <a href="https://www.etmall.com.tw/i/3366917" title="華碩主機板">
+              <img src="index_03.png" alt="華碩主機板">
+            </a>
+          </li>
+          <li class="visual__fragment width--auto">
+            <a href="https://www.etmall.com.tw/i/3366912" title="買一送一">
+              <img src="index_04.png" alt="買一送一">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <!-- 動畫小物件 -->
+  <div class="animate__wrap" style="z-index: -1;">
+    <!-- 如果有多組物件，可以複製命名animate__obj--0{數字} css 也複製一份就可以一直往下生 -->
+    <img class="animate__animated animate__obj--02 animate__bounce animate__infinite" src="ani_02.png" alt="安全帽">
+    <img class="animate__animated animate__obj--03 animate__flash animate__infinite" src="ani_03.png" alt="燈">
+  </div>
+</div>
+<script src="https://www.etmall.com.tw/Scripts/lib/jquery/jquery-2.2.0.min.js"></script>
+<!-- ============== 輪播 start ============== -->
+<script src="https://www.etmall.com.tw/XML/content/DMSetting/Final/209901/SP_1116205/swiper.min.js"></script>
+<!-- ============== 輪播 end ============== -->
+<!-- 東森浮水印
+<script id="scriptIconFloat"
+        src="https://www.etmall.com.tw/XML/content/DMSetting/Final/209901/SP_1107916/float-icon.js"></script> -->
+<!-- 森森浮水印
+<script id="scriptIconFloat" src="http://www.u-mall.com.tw/XML/content/DMSetting/Final/209901/SP_1104381/float-icon.js"></script> -->
+<!-- 旅遊置頂bar
+<script id="scriptAddBn" src="https://www.etmall.com.tw/XML/content/DMSetting/Final/209901/SP_1106742/add-bn.js"></script> -->
+<!-- 共用JS -->
+<!-- <script id="generateScript" src="https://www.etmall.com.tw/XML/content/DMSetting/Final/209901/SP_1115354/generate_v1.js"></script> -->
+<!--[電梯步驟3] 電梯 JS
+    data-elevator.js 是填寫下方欄位資料的js
+    sp-elevator.js   是共用的線上js
+
+<script src="data-elevator.js"></script>
+<script src="https://media.etmall.com.tw/sp/10382/sp-elevator.js"></script>-->
+<!-- [電梯步驟3] 電梯 JS END -->

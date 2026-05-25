@@ -1,0 +1,366 @@
+<meta charset="UTF-8">
+<meta name="viewport"
+  content="width=device-width">
+<!-- ============== 輪播 start ============== -->
+<link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/swiper.min.css">
+<!-- ============== 輪播 end ============== -->
+<!-- 共用CSS -->
+<link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/animate.min.css">
+<link rel="stylesheet" href="https://media.etmall.com.tw/sp/12500/generate_v1.2.css">
+
+<!-- [電梯步驟1] 電梯CSS 不用就關掉 -->
+<!-- 商品左電梯CSS，要使用還要在步驟2開啟左電梯data資料 -->
+<!-- <link id="localElevatorLeft" rel="stylesheet" href="sp-elevator-left.css"> -->
+
+<!-- 商品右電梯CSS，步驟2有測試div可以測試 -->
+<link id="localElevatorRight" rel="stylesheet" href="sp-elevator-right.css">
+<!-- [電梯步驟1] 電梯CSS END -->
+
+<style>
+  body {
+    position: relative;
+    /* 自行修正背景顏色 */
+    background-color: #b5e6ff;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(bg-m.jpg) center 0 no-repeat;
+    background-size: 100%;
+  }
+
+  @media screen and (min-width: 960px) {
+    body::before {
+      background: url(bg.jpg) center 0 no-repeat;
+      background-size: auto;
+    }
+  }
+
+  body.bg-fixed::before {
+    position: fixed;
+    height: 100vh;
+  }
+
+  /* == 商品輪播 == */
+  .swipersty__product {
+      position: absolute;
+      z-index: 3;
+      left: 2%;
+      width: 98%;
+  }
+  .swipersty__product--top {
+      top: 7.5%;
+  }
+
+
+/* == 滑動Banner == */
+.swipersty__banner {
+    position: absolute;
+    z-index: 3;
+    left: 7%;
+    width: 86%;
+}
+.swipersty__banner--top {
+    top: 82.2%;
+}
+
+  /* 調整logo位置大小 */
+  /* .logo {
+    top: 1%;
+    left: 1%;
+    width: 30%;
+    max-width: 220px;
+  } */
+
+  /* 連結測試 */
+  /* .sp__visual a{
+    filter: brightness(500%);
+  } */
+
+  /* 切片測試 */
+  /* .visual__fragment::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #00f;
+    pointer-events: none;
+  } */
+
+  /*-- 動畫小物件 --*/
+
+  /* ======================================== */
+  .animate__wrap {
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0);
+  }
+
+  /*-- 手機版：設定物件距離左邊與上邊的位置，單位可以使用"%"或"vw";width:建議電腦版可以使用auto，手機版則可使用%調整 --*/
+  .animate__wrap .animate__obj--01 {
+    position: absolute;
+    top: 10.2vw;
+    left: 22vw;
+    width: 36%;
+  }
+
+  /*-- 電腦版：設定物件距離左邊與上邊的位置，單位可以使用"px"，左邊可以挑整clac()後面的px值;width:建議電腦版可以使用auto，手機版則可使用%調整 --*/
+  @media screen and (min-width: 960px) {
+    .animate__wrap .animate__obj--01 {
+      top: 112px;
+      left: calc(50% - 250px);
+      width: auto;
+    }
+  }
+    /*-- 影片 --*/
+    .video__wrap {
+        position: relative;
+        z-index: 1;
+    }
+    /*-- 手機版：
+            1. 設定物件距離左邊與上邊的位置，單位可以使用"%"或"vw"
+            2. width 建議電腦版可以使用auto，手機版則可使用%調整
+     --*/
+    .video__wrap .video__obj--01{
+    position: absolute;
+    top: 262vw;
+    left: 7vw;
+    width: 86%;
+    height: 48vw;
+    }
+    /*-- 電腦版：
+            設定物件距離左邊與上邊的位置，單位可以使用"px"，左邊可以挑整clac()後面的px值
+            width 建議電腦版可以使用auto，手機版則可使用%調整
+     --*/
+     @media screen and (min-width: 960px) {
+      .video__wrap .video__obj--01 {
+        top: 2522px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 819px;
+        height: 459px;
+        }
+    }
+</style>
+
+<!-- 是否要固定背景，不要就拿掉class -->
+<body>
+
+  <div class="elevatorHome js--main--dialog" id="elevatorHome"></div>
+  <div class="navRightBar" id="navRightBar"></div>
+  <!--<div id="barHome"></div>-->
+  <div id="iconHome" class="layout--main home--icon"></div>
+  <div id="spWrap" class="sp__wallper">
+    <!-- 動畫小物件 -->
+    <div class="animate__wrap">
+
+         <!-- <div class="video__wrap"><iframe class="video__obj--01" src="p1_video.mp4" frameborder="0" allow="mute; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe></div> -->
+        <div class="video__wrap"><video class="video__obj--01" src="p1_video.mp4" autoplay muted playsinline controls></video></div>
+
+    </div>
+    <!-- 主視覺 -->
+    <main class="sp__main">
+      <div class="layout--main home--logo">
+        <a href="https://www.etmall.com.tw"><img class="logo" src="ehs-logo.png" alt="東森購物"></a>
+      </div>
+      <section class="sp__visual">
+        <div class="layout--main">
+          <ul class="visual--auto clearfix">
+            <li class="visual__fragment width--auto">
+              <img src="index_01.jpg" title="BOSCH 夏殺狂歡祭" alt="BOSCH 夏殺狂歡祭">
+            </li>
+            <li class="visual__fragment width--auto">
+              <img src="index_02.jpg" alt="輪播2品">
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="#" title="品牌神券">
+                <img src="index_03.jpg" alt="品牌神券">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="#" title="小家電滿額">
+                <img src="index_04.jpg" alt="小家電滿額">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="#" title="銀行回饋">
+                <img src="index_05.jpg" alt="銀行回饋">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <img src="index_06.jpg" alt="下單登記送多項大獎">
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/Activity/Reg/916" title="登記送小家電">
+                <img src="index_07.jpg" alt="登記送小家電">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/Activity/Reg/565" title="全家電滿額">
+                <img src="index_08.jpg" alt="全家電滿額">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/Activity/Reg/916" title="登記送小家電">
+                <img src="index_09.jpg" alt="登記送小家電">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="#note" title="活動說明">
+                <img src="index_10.jpg" alt="活動說明">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <img src="index_11.jpg" alt="第一次買請點我">
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="#" title="洗碗機 選購指南">
+                <img src="index_12.jpg" alt="洗碗機 選購指南">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="#" title="洗衣機 選購指南">
+                <img src="index_13.jpg" alt="洗衣機 選購指南">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="#" title="攪拌機 選購指南">
+                <img src="index_14.jpg" alt="攪拌機 選購指南">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <img src="index_15.jpg" alt="年度最夯 重磅下殺">
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/i/3156282" title="洗碗機">
+                <img src="index_16.jpg" alt="洗碗機">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/i/3070353" title="洗衣機">
+                <img src="index_17.jpg" alt="洗衣機">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/i/3035673" title="冰箱">
+                <img src="index_18.jpg" alt="冰箱">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/i/ 2562785" title="空氣清淨機">
+                <img src="index_19.jpg" alt="空氣清淨機">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <img src="index_20.jpg" alt="大牌熱銷">
+            </li>
+            <li class="visual__fragment width--auto">
+              <img src="index_21.jpg" alt="精選分類">
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/gp/129656" title="洗碗機">
+                <img src="index_22.jpg" alt="洗碗機">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/c3/110085" title="冰箱">
+                <img src="index_23.jpg" alt="冰箱">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/gp/144344" title="洗衣機">
+                <img src="index_24.jpg" alt="洗衣機">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/c3/105316" title="攪拌機">
+                <img src="index_25.jpg" alt="攪拌機">
+              </a>
+            </li>
+            <li class="visual__fragment width--auto">
+              <a href="https://www.etmall.com.tw/p/150805" title="吸塵器">
+                <img src="index_26.jpg" alt="吸塵器">
+              </a>
+            </li>
+          </ul>
+          <!-- 商品輪播 -->
+        <div class="swipersty__product swipersty__product--top">
+          <div id="swiperstyProduct" class="swiper-container pic_light">
+              <ul class="swiper-wrapper">
+                  <li class="swiper-slide"><a href="https://www.etmall.com.tw/i/2547782"><img src="swiper_pp-1.png" title="吸塵器" alt="吸塵器"></a></li>
+                  <li class="swiper-slide"><a href="https://www.etmall.com.tw/i/2471221"><img src="swiper_pp-2.png" title="洗碗機" alt="洗碗機"></a></li>
+
+              </ul>
+          </div>
+        </div>
+        <!-- 商品輪播 END -->
+
+        <!-- 滑動Banner -->
+        <div class="swipersty__banner swipersty__banner--top">
+          <div id="swiperstyBanner" class="swiper-container pic_light">
+              <ul class="swiper-wrapper">
+                  <li class="swiper-slide"><a href="#"><img src="swiper_banner-1.jpg" title="館內" alt="館內"></a></li>
+                  <li class="swiper-slide"><a href="#"><img src="swiper_banner-2.jpg" title="大首" alt="大首"></a></li>
+                  <li class="swiper-slide"><a href="#"><img src="swiper_banner-3.jpg" title="館內" alt="館內"></a></li>
+                  <li class="swiper-slide"><a href="#"><img src="swiper_banner-4.jpg" title="大首" alt="大首"></a></li>
+                  <li class="swiper-slide"><a href="#"><img src="swiper_banner-5.jpg" title="館內" alt="館內"></a></li>
+                </ul>
+          </div>
+     </div>
+     <!-- 滑動Banner END -->
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://media.etmall.com.tw/sp/12500/jquery-3.6.0.min.js"></script>
+  <!-- ============== 輪播 start ============== -->
+  <script src="https://media.etmall.com.tw/sp/12500/swiper.min.js"></script>
+  <!-- ============== 輪播 end ============== -->
+
+  <!-- 共用JS -->
+  <script id="generateScript" src="https://media.etmall.com.tw/sp/12500/generate_v1.2.js"></script>
+  <script>
+    // 商品輪播
+    var swiperstyBanner = new Swiper("#swiperstyProduct", {
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        autoHeight: true,
+        grabCursor: true,
+        loop: true,
+        speed: 1000,
+    });
+    // 商品輪播 end
+
+    // 滑動Banner
+  var swiperstyBanner = new Swiper("#swiperstyBanner", {
+      autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+      },
+      autoHeight: true,
+      grabCursor: true,
+      loop: true,
+      speed: 1000,
+  });
+  // 滑動Banner end
+  </script>
+  <!--[電梯步驟2] 電梯 JS -->
+  <!-- 商品左電梯單機版資料，不用就關掉，要使用還要上方步驟1開啟商品左電梯CSS -->
+  <!-- <script id="dataElevatorLeft" src="data-elevator.js"></script> -->
+
+  <!-- 測試商品右電梯用，上線前必須關掉-->
+  <!-- <div data-title="ccc"></div> -->
+
+  <!-- 線上自動切換電梯，無論如何都要有 -->
+  <script id="checkElevator" src="https://media.etmall.com.tw/sp/11911/check-elevator.js"></script>
+  <!-- [電梯步驟2] 電梯 JS END -->
+</body>
