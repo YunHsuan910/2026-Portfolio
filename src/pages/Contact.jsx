@@ -8,6 +8,8 @@ import flower_r from "../assets/flower_r.webp";
 import cloud from "../assets/cloud.webp";
 import li from "../assets/li.webp";
 
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 function Contact() {
   return (
     <div className="container contact">
@@ -58,7 +60,12 @@ function Contact() {
           <div className="info">
             <span className="title">簡歷連結：</span>
             <span>
-              <a href="">點我查看</a>
+              <a
+                href={`${basePath}/resume.pdf`}
+                download="蔡昀軒_履歷.pdf"
+              >
+                點我下載
+              </a>
             </span>
           </div>
           <div className="info">
