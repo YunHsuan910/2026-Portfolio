@@ -1,0 +1,28 @@
+@import "variables";
+@import "animation";
+@import "base";
+
+.lowRes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(15px); // 營造高級的霧面漫射光質感
+    transform: scale(1.05); // 稍微放大，消除模糊後邊緣產生的啃蝕白邊
+    z-index: 1;
+    opacity: 1;
+
+    &.fadeOut {
+        opacity: 0;
+        pointer-events: none; // 變透明後不擋住滑鼠點擊事件
+    }
+}
+
+.highRes {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+
+    &.fadeIn {
+        opacity: 1;
+    }
+}

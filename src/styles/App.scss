@@ -736,6 +736,7 @@ body {
                     max-height: 85dvh; // 限制高度，防止長圖超出螢幕
                     .img {
                         width: 100%;
+                        overflow-x: hidden;
                         overflow-y: auto;
                         max-height: 83dvh; // 限制高度，防止長圖超出螢幕
                         object-fit: contain;
