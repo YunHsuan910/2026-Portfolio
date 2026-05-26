@@ -5,8 +5,8 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import projectsData from "../data/projects.json";
 //導入圖片
-import mobileFrame from "../assets/detail/mobile_frame.png";
-import pcFrame from "../assets/detail/pc_frame.png";
+import mobileFrame from "../assets/detail/mobile_frame.webp";
+import pcFrame from "../assets/detail/pc_frame.webp";
 
 function Details() {
   const { id } = useParams();
@@ -14,7 +14,7 @@ function Details() {
 
   // 1. 取得web專案 ID 的陣列
   const webProjectIds = Object.keys(projectsData).filter(
-    (key) => projectsData[key].type === "web"
+    (key) => projectsData[key].type === "web",
   );
   // 2. 找到目前專案在陣列中的位置
   const currentIndex = webProjectIds.indexOf(id);
@@ -30,10 +30,10 @@ function Details() {
   };
 
   const fadeInVariant = {
-    initial: { opacity: 0, transform: "translateY(30px)" }, // 初始狀態：透明且下方 30px
+    initial: { opacity: 0, y: 30 }, // 初始狀態：透明且下方 30px
     visible: {
       opacity: 1,
-      transform: "translateY(0)",
+      y: 0,
       transition: { duration: 0.6, ease: "easeIn" },
     },
   };
@@ -46,14 +46,15 @@ function Details() {
   return (
     <div className="detailWrap">
       <div className="imgStart">
-        <img src={getImageUrl(data.imgStartName)} alt="首圖" />
+        <img src={getImageUrl(data.imgStartName)} alt="首圖" loading="lazy"/>
       </div>
       {/* 介紹區1 */}
       {data.mainImgName ? (
         <motion.section
           className="section sectionL"
+          initial="initial"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.5 }}
           variants={fadeInVariant}
         >
           <div className="mobile">
@@ -67,11 +68,11 @@ function Details() {
                   />
                 </video>
               ) : (
-                <img src={getImageUrl(data.mainImgName)} alt="介紹圖" />
+                <img src={getImageUrl(data.mainImgName)} alt="介紹圖" loading="lazy"/>
               )}
             </div>
             <div className="frame">
-              <img src={mobileFrame} alt="手機框" />
+              <img src={mobileFrame} alt="手機框" loading="lazy"/>
             </div>
           </div>
 
@@ -92,8 +93,9 @@ function Details() {
       {data.subImgName ? (
         <motion.section
           className="section sectionR"
+          initial="initial"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.5 }}
           variants={fadeInVariant}
         >
           <div className="text">
@@ -110,11 +112,11 @@ function Details() {
                   <source src={getImageUrl(data.subImgName)} type="video/mp4" />
                 </video>
               ) : (
-                <img src={getImageUrl(data.subImgName)} alt="介紹圖" />
+                <img src={getImageUrl(data.subImgName)} alt="介紹圖" loading="lazy"/>
               )}
             </div>
             <div className="frame">
-              <img src={mobileFrame} alt="手機框" />
+              <img src={mobileFrame} alt="手機框" loading="lazy"/>
             </div>
           </div>
         </motion.section>
@@ -125,8 +127,9 @@ function Details() {
       {data.PcImgName ? (
         <motion.section
           className="section"
+          initial="initial"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.5 }}
           variants={fadeInVariant}
         >
           <div className="text">
@@ -143,11 +146,11 @@ function Details() {
                   <source src={getImageUrl(data.PcImgName)} type="video/mp4" />
                 </video>
               ) : (
-                <img src={getImageUrl(data.PcImgName)} alt="介紹圖" />
+                <img src={getImageUrl(data.PcImgName)} alt="介紹圖" loading="lazy"/>
               )}
             </div>
             <div className="frame">
-              <img src={pcFrame} alt="電腦框" />
+              <img src={pcFrame} alt="電腦框" loading="lazy"/>
             </div>
           </div>
         </motion.section>
@@ -158,7 +161,7 @@ function Details() {
       {/* 結尾圖 */}
       {data.imgEndName ? (
         <div className="imgEnd">
-          <img src={getImageUrl(data.imgEndName)} alt="結尾圖" />
+          <img src={getImageUrl(data.imgEndName)} alt="結尾圖" loading="lazy"/>
         </div>
       ) : (
         <></>

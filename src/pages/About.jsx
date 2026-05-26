@@ -1,6 +1,6 @@
 import React from "react";
 //導入圖片
-import photo from "../assets/photo.png";
+import photo from "../assets/photo.webp";
 
 //導入元件
 import Company from "../components/Company";

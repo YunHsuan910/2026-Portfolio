@@ -1,10 +1,10 @@
 import React from "react";
 //導入圖片
-import hero_1 from "../assets/skill_hero_1.png";
-import hero_2 from "../assets/skill_hero_2.png";
-import hero_ani_1 from "../assets/skill_ani_1.png";
-import hero_ani_2 from "../assets/skill_ani_2.png";
-import hero_ani_3 from "../assets/skill_ani_3.png";
+import hero_1 from "../assets/skill_hero_1.webp";
+import hero_2 from "../assets/skill_hero_2.webp";
+import hero_ani_1 from "../assets/skill_ani_1.webp";
+import hero_ani_2 from "../assets/skill_ani_2.webp";
+import hero_ani_3 from "../assets/skill_ani_3.webp";
 
 //導入元件
 import Tech from "../components/Tech";
@@ -16,10 +16,10 @@ function Skills() {
         <section className="skill imgL">
           <div className="picture">
             <div className="hero">
-              <img src={hero_1} alt="鴨子拿鋼筆" />
+              <img src={hero_1} alt="鴨子拿鋼筆" loading="lazy"/>
             </div>
             <div className="ani">
-              <img src={hero_ani_1} alt="環繞裝飾" />
+              <img src={hero_ani_1} alt="環繞裝飾" loading="lazy"/>
             </div>
           </div>
           <div className="textWrap">
@@ -43,13 +43,13 @@ function Skills() {
         <section className="skill imgR">
           <div className="picture">
             <div className="hero">
-              <img src={hero_2} alt="鴨子打電腦" />
+              <img src={hero_2} alt="鴨子打電腦" loading="lazy"/>
             </div>
             <div className="ani ani1">
-              <img src={hero_ani_2} alt="環繞裝飾" />
+              <img src={hero_ani_2} alt="環繞裝飾" loading="lazy"/>
             </div>
             <div className="ani ani2">
-              <img src={hero_ani_3} alt="環繞裝飾" />
+              <img src={hero_ani_3} alt="環繞裝飾" loading="lazy"/>
             </div>
           </div>
           <div className="textWrap">

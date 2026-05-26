@@ -2,26 +2,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 //導入圖片
-import location from "../assets/location.png";
+import location from "../assets/location.webp";
 
 function Company({ time, name, jobTitle, description }) {
   const fadeInVariant = {
-    initial: { opacity: 0, transform: "translateY(30px)" }, // 初始狀態：透明且下方 30px
+    initial: { opacity: 0, y: 30 }, // 初始狀態：透明且下方 30px
     visible: {
       opacity: 1,
-      transform: "translateY(0)",
+      y: 0,
       transition: { duration: 0.6, ease: "easeIn" },
     },
   };
   return (
     <div className="company">
       <div className="icon">
-        <img src={location} alt="座標" />
+        <img src={location} alt="座標" loading="lazy"/>
       </div>
       <motion.div
         className="textWrap"
+        initial="initial"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.5 }}
         variants={fadeInVariant}
       >
         <p className="time">{time}</p>

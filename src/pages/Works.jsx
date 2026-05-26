@@ -64,6 +64,14 @@ function Works() {
     document.body.style.overflow = "auto";
   };
 
+  // 類別切換時平滑捲動到最上方
+  useEffect(() => {
+    window.scrollTo({
+      top: 0, // 捲動到最頂部
+      behavior: "smooth", // 使用平滑滾動動畫
+    });
+  }, [activeType]);
+
   return (
     <div className="container works">
       <div className="subNav">

@@ -19,7 +19,7 @@ function LightBox({ lightbox, closeLightbox }) {
         </button>
         <div className="detail">
           <div className="img">
-            <img src={lightbox.imgSrc} alt="放大預覽" />
+            <img src={lightbox.imgSrc} alt="放大預覽" loading="lazy"/>
           </div>
           <div className="infoWrap">
             <div className="title">{lightbox.title}</div>

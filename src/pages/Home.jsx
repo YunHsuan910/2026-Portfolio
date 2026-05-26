@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 //導入圖片
 import kv from "../assets/kv.gif";
-import icon_1 from "../assets/category_icon_1.png";
-import icon_2 from "../assets/category_icon_2.png";
-import preview_1 from "../assets/category_preview_1.png";
-import preview_2 from "../assets/category_preview_2.png";
+import icon_1 from "../assets/category_icon_1.webp";
+import icon_2 from "../assets/category_icon_2.webp";
+import preview_1 from "../assets/category_preview_1.webp";
+import preview_2 from "../assets/category_preview_2.webp";
 
 //導入元件
 import Category from "../components/Category";

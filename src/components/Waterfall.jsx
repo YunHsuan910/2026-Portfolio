@@ -5,12 +5,13 @@ function Waterfall({ project, openLightbox, getPreviewImageUrl }) {
     <div
       className="item"
       onClick={() =>
-        openLightbox(project.previewSrc, project.mainTitle, project.projectUrl)
+        openLightbox(project.mainSrc, project.mainTitle, project.projectUrl)
       }
     >
       <img
-        src={getPreviewImageUrl(project.previewSrc)}
+        src={getPreviewImageUrl(project.mainSrc)}
         alt={project.mainTitle}
+        loading="lazy"
       />
       <div className="info">
         <span>{project.mainTitle}</span>

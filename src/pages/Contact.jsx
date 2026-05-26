@@ -1,12 +1,12 @@
 import React from "react";
 //導入圖片
-import hero from "../assets/contact_hero.png";
-import shadow from "../assets/shadow.png";
-import file from "../assets/file.png";
-import flower_l from "../assets/flower_l.png";
-import flower_r from "../assets/flower_r.png";
-import cloud from "../assets/cloud.png";
-import li from "../assets/li.png";
+import hero from "../assets/contact_hero.webp";
+import shadow from "../assets/shadow.webp";
+import file from "../assets/file.webp";
+import flower_l from "../assets/flower_l.webp";
+import flower_r from "../assets/flower_r.webp";
+import cloud from "../assets/cloud.webp";
+import li from "../assets/li.webp";
 
 function Contact() {
   return (

@@ -3,631 +3,733 @@
     "type": "web",
     "mainTitle": "金繕回憶館",
     "description": "AI 情感重鑄：指尖流動的音樂療癒",
-    "previewSrc": "project_1.png",
-    "imgStartName": "detail_1-start.png",
-    "mainImgName": "detail_1-1.png",
+    "previewSrc": "project_1.webp",
+    "imgStartName": "detail_1-start.webp",
+    "mainImgName": "detail_1-1.webp",
     "time": "2026",
     "mainContent": "運用 Lyria RealTime API 及 Gemini 3 API 將破碎的回憶重鑄為療癒音軌，並透過 Web Audio API 與 IndexedDB 突破存儲限制，實現大容量二進位持久化。手寫 WAV 編碼技術將無形訊號固化為實體下載，以 SOA 架構讓技術成為修復情感的溫暖迴響。",
     "subImgName": "detail_1-2.mp4",
     "subTitle": "金繕儀式",
     "subContent": "此專案結合了前沿的 AI 技術與深沉的情感修復體驗。利用 Gemini 3 API 深度解析使用者上傳的文字記憶或心情圖片，將其精準轉化為 Lyria RealTime API 所需的音頻生成提示詞。核心互動設計強調「金繕儀式」的莊嚴感，當使用者按下指紋進行儀式時，獨一無二的療癒音軌便隨之誕生。透過指尖的觸覺連結，音樂如同流動的金漆，緩緩滲入內心的情感裂縫，將破碎的遺憾重鑄為優美的旋律，實現一場科技與心靈深度共鳴的感官療癒之旅。",
-    "imgEndName": "detail_1-end.png",
+    "imgEndName": "detail_1-end.webp",
     "link": "https://kinstugi-zcdr.vercel.app/"
   },
   "catBar": {
     "type": "web",
     "mainTitle": "貓酒吧網頁產生器",
     "description": "自由調配元件產生你的專屬網頁",
-    "previewSrc": "project_2.png",
-    "imgStartName": "detail_2-start.png",
-    "mainImgName": "detail_2-1.png",
+    "previewSrc": "project_2.webp",
+    "imgStartName": "detail_2-start.webp",
+    "mainImgName": "detail_2-1.webp",
     "time": "2026",
     "mainContent": "一款充滿創意與趣味的互動工具，使用者可以像調配雞尾酒一樣，自由選擇並搭配各式功能元件，親手打造出專屬的個性化網頁。 網站將繁瑣的切版流程轉化為輕鬆的「調配」體驗，讓網頁設計變得既好玩又直覺。 結合了呆萌可愛的視覺風格與靈活的互動性，這不僅是一個技術展示，更是一個讓靈感隨心所欲噴發的數位實驗室。",
     "PcImgName": "detail_2-2.mp4",
     "subTitle": "Web Neat! 調配你的專屬風格",
     "subContent": "將網頁設計轉化為如調配雞尾酒般的互動體驗。使用者可直覺地在 Header、Content 與 Footer 三大類別中自由切換，並即時預覽多款精緻的模組組合。系統支援一鍵切換桌機、平板與手機版面，確保響應式設計的完美呈現。最核心的技術亮點在於「一鍵打包」功能，能自動生成乾淨的 HTML、CSS 與 JS 原始碼並匯出壓縮檔。將繁瑣的開發流程簡化為簡單的點擊與挑選，讓每個人都能以優雅的方式，快速調製出高品質的數位網頁。",
-    "imgEndName": "detail_2-end.png",
+    "imgEndName": "detail_2-end.webp",
     "link": "https://yunhsuan910.github.io/webGenerator/"
   },
   "invoice": {
     "type": "web",
     "mainTitle": "雲端發票捐贈活動",
     "description": "數位互動提升公益動能",
-    "previewSrc": "project_3.png",
-    "imgStartName": "detail_3-start.png",
+    "previewSrc": "project_3.webp",
+    "imgStartName": "detail_3-start.webp",
     "mainImgName": "detail_3-1.mp4",
     "time": "2020",
     "mainContent": "此網站為 2020 年於藝淇數位實習時參與的公部門專案，旨在透過趣味互動推廣雲端發票捐贈。我獨立負責全站的 RWD 響應式切版與動態效果呈現，確保使用者在不同裝置下皆能流暢體驗。同時參與了部分頁面視覺設計，將稅務宣導與刮刮樂遊戲完美結合，透過精確的版面佈局與細膩動畫，大幅提升活動的互動性與親和力。",
-    "subImgName": "detail_3-2.png",
+    "subImgName": "detail_3-2.webp",
     "subTitle": "幸運刮刮樂",
     "subContent": "此專案核心在於將枯燥的稅務宣導轉化為直覺的數位體驗。使用者透過綁定手機載具並捐贈雲端發票，即可獲取參加「幸運刮刮樂」遊戲的資格，藉此大幅提升民眾的參與意願與黏著度。在實作上，確保捐贈流程在行動裝置上也能清楚瀏覽操作，成功縮短了公益參與的距離，讓捐發票不再只是例行公事，而是一場充滿趣味與驚喜的數位遊戲之旅。",
-    "imgEndName": "detail_3-end.png",
+    "imgEndName": "detail_3-end.webp",
     "link": "https://s110519007.github.io/Taipei_invoice/"
   },
   "littletipsy": {
     "type": "web",
     "mainTitle": "微暈勒戒所",
     "description": "漸層美學與深度互動的愛情診療室",
-    "previewSrc": "project_4.png",
-    "imgStartName": "detail_4-start.png",
-    "mainImgName": "detail_4-1.jpg",
+    "previewSrc": "project_4.webp",
+    "imgStartName": "detail_4-start.webp",
+    "mainImgName": "detail_4-1.webp",
     "time": "2020",
     "mainContent": "本網頁設計源於與好友「維」共同發想的 Podcast 計畫，站名結合彼此名字諧音「維、昀」，精確捕捉人們在愛情中微醺、沉醉的狀態。Logo 以兩人頭像為核心，封面設計大膽融入注音符號與象徵性別特徵的幾何圖像，寓意節目將深度探討從感性心靈到理性生理等愛情的各個維度。透過可愛插畫視覺與趣味心理測驗，將私密的感情議題轉化為輕鬆的互動體驗，邀請聽眾在微暈的氛圍中，一起探討那些隱藏在愛情背後的各種事件",
-    "subImgName": "detail_4-2.jpg",
+    "subImgName": "detail_4-2.webp",
     "subTitle": "微暈美學",
     "subContent": "以粉藍漸層營造美妙的微醺氛圍，背景圓圈意象呼應陷入愛河時「暈呼呼」的情感波動。視覺設計上導入深色模式，提供更具沉浸感的瀏覽體驗。功能上整合 Google 表單，打造「愛情診斷」問卷與聽眾意見回饋系統，透過資料自動連動，讓使用者在互動中辨析自己的愛情狀態。",
-    "imgEndName": "detail_4-end.png",
+    "imgEndName": "detail_4-end.webp",
     "link": "https://s110519007.github.io/littletipsy/"
   },
   "gameEntrance": {
     "type": "web",
     "mainTitle": "遊戲入口頁",
     "description": "沉浸式經典電玩娛樂入口平台",
-    "previewSrc": "project_5.png",
-    "imgStartName": "detail_5-start.png",
+    "previewSrc": "project_5.webp",
+    "imgStartName": "detail_5-start.webp",
     "mainImgName": "detail_5-1.mp4",
     "time": "2026",
     "mainContent": "本網頁為一款融合精緻視覺與流暢動態的經典電玩娛樂入口平台。介面設計以強烈的視覺張力與現代感佈局，完美還原了街機娛樂的熱烈氛圍。透過細膩的微互動與光影特效設計，成功優化了使用者引導流程，為經典娛樂注入全新的數位美學與極致的沉浸感。",
-    "subImgName": "detail_5-2.png",
+    "subImgName": "detail_5-2.webp",
     "subTitle": "安全分流引導",
     "subContent": "視覺設計採用極具沉浸感的深夜藍作為基調，搭配霓虹藍的微光特效聚焦核心按鈕，營造出極具科技感與安全感的直覺介面。透過清晰的層次佈局與流暢的彈窗互動，有效降低使用者的認知負擔，提供流暢、穩定且具備現代美學的導流體驗。",
-    "imgEndName": "detail_5-end.png",
+    "imgEndName": "detail_5-end.webp",
     "link": "https://99kk-vip.pages.dev/"
   },
   "yearEndParty": {
     "type": "ec",
     "mainTitle": "愛呦尾牙",
-    "previewSrc": "ec_1.jpg"
+    "previewSrc": "ec_1_pre.webp",
+    "mainSrc": "ec_1.webp"
   },
   "superDad": {
     "type": "ec",
     "mainTitle": "超級犒爸節",
-    "previewSrc": "ec_2.jpg"
+    "previewSrc": "ec_2_pre.webp",
+    "mainSrc": "ec_2.webp"
   },
   "workSnack": {
     "type": "ec",
     "mainTitle": "職場美食應援團",
-    "previewSrc": "ec_3.jpg",
+    "previewSrc": "ec_3_pre.webp",
+    "mainSrc": "ec_3.webp",
     "projectUrl": "/campaigns/ec_3/index.html"
   },
   "barbiePet": {
     "type": "ec",
     "mainTitle": "萌寵99敗家日",
-    "previewSrc": "ec_4.jpg",
+    "previewSrc": "ec_4_pre.webp",
+    "mainSrc": "ec_4.webp",
     "projectUrl": "/campaigns/ec_4/index.html"
   },
   "beautyWomen": {
     "type": "ec",
     "mainTitle": "不要迷戀姐",
-    "previewSrc": "ec_5.jpg",
+    "previewSrc": "ec_5_pre.webp",
+    "mainSrc": "ec_5.webp",
     "projectUrl": "/campaigns/ec_5/index.html"
   },
   "mineBoss": {
     "type": "ec",
     "mainTitle": "礦老闆來囉",
-    "previewSrc": "ec_6.jpg",
+    "previewSrc": "ec_6_pre.webp",
+    "mainSrc": "ec_6.webp",
     "projectUrl": "/campaigns/ec_6/index.html"
   },
   "TimberlandValentine": {
     "type": "ec",
     "mainTitle": "為愛心動",
-    "previewSrc": "ec_7.jpg",
+    "previewSrc": "ec_7_pre.webp",
+    "mainSrc": "ec_7.webp",
     "projectUrl": "/campaigns/ec_7/index.html"
   },
   "NetEastWest": {
     "type": "ec",
     "mainTitle": "網路東西軍",
-    "previewSrc": "ec_8.jpg",
+    "previewSrc": "ec_8_pre.webp",
+    "mainSrc": "ec_8.webp",
     "projectUrl": "/campaigns/ec_8/index.html"
   },
   "skinCare": {
     "type": "ec",
     "mainTitle": "保養大排檔",
-    "previewSrc": "ec_9.jpg"
+    "previewSrc": "ec_9_pre.webp",
+    "mainSrc": "ec_9.webp"
   },
   "bubblePlanet": {
     "type": "ec",
     "mainTitle": "泡泡萌星球",
-    "previewSrc": "ec_10.jpg",
+    "previewSrc": "ec_10_pre.webp",
+    "mainSrc": "ec_10.webp",
     "projectUrl": "/campaigns/ec_10/index.html"
   },
   "eatHealthy": {
     "type": "ec",
     "mainTitle": "食補之道吃出健康",
-    "previewSrc": "ec_11.jpg",
+    "previewSrc": "ec_11_pre.webp",
+    "mainSrc": "ec_11.webp",
     "projectUrl": "/campaigns/ec_11/index.html"
   },
   "dogCatBack": {
     "type": "ec",
     "mainTitle": "汪喵星人返場秀",
-    "previewSrc": "ec_12.jpg",
+    "previewSrc": "ec_12_pre.webp",
+    "mainSrc": "ec_12.webp",
     "projectUrl": "/campaigns/ec_12/index.html"
   },
 
   "beautyPower": {
     "type": "ec",
     "mainTitle": "美力全開",
-    "previewSrc": "ec_13.jpg",
+    "previewSrc": "ec_13_pre.webp",
+    "mainSrc": "ec_13.webp",
     "projectUrl": "/campaigns/ec_13/index.html"
   },
   "timeBack": {
     "type": "ec",
     "mainTitle": "時光逆行生活節",
-    "previewSrc": "ec_14.jpg",
+    "previewSrc": "ec_14_pre.webp",
+    "mainSrc": "ec_14.webp",
     "projectUrl": "/campaigns/ec_14/index.html"
   },
 
   "tonightOrange": {
     "type": "ec",
     "mainTitle": "今晚有橘嗎",
-    "previewSrc": "ec_16.jpg",
+    "previewSrc": "ec_16_pre.webp",
+    "mainSrc": "ec_16.webp",
     "projectUrl": "/campaigns/ec_16/index.html"
   },
   "ETtownPopular": {
     "type": "ec",
     "mainTitle": "ETtown人氣王",
-    "previewSrc": "ec_17.jpg"
+    "previewSrc": "ec_17_pre.webp",
+    "mainSrc": "ec_17.webp"
   },
   "anniversaryGo": {
     "type": "ec",
     "mainTitle": "週慶寵愛狂歡GO",
     "description": "",
-    "previewSrc": "ec_18.jpg",
+    "previewSrc": "ec_18_pre.webp",
+    "mainSrc": "ec_18.webp",
     "projectUrl": "/campaigns/ec_18/index.html"
   },
   "loveClass": {
     "type": "ec",
     "mainTitle": "戀愛學分保證班",
-    "previewSrc": "ec_15.jpg",
+    "previewSrc": "ec_15_pre.webp",
+    "mainSrc": "ec_15.webp",
     "projectUrl": "/campaigns/ec_15/index.html"
   },
   "beautyShopping": {
     "type": "ec",
     "mainTitle": "1111玩美爆買節",
-    "previewSrc": "ec_19.jpg",
+    "previewSrc": "ec_19_pre.webp",
+    "mainSrc": "ec_19.webp",
     "projectUrl": "/campaigns/ec_19/index.html"
   },
   "outdoorKitchen": {
     "type": "ec",
     "mainTitle": "露天廚房",
-    "previewSrc": "ec_20.jpg",
+    "previewSrc": "ec_20_pre.webp",
+    "mainSrc": "ec_20.webp",
     "projectUrl": "/campaigns/ec_20/index.html"
   },
   "travelAsia": {
     "type": "ec",
     "mainTitle": "暢遊亞洲",
-    "previewSrc": "ec_21.jpg",
+    "previewSrc": "ec_21_pre.webp",
+    "mainSrc": "ec_21.webp",
     "projectUrl": "/campaigns/ec_21/index.html"
   },
   "treasureHunt": {
     "type": "ec",
     "mainTitle": "尋寶之旅",
-    "previewSrc": "ec_22.jpg",
+    "previewSrc": "ec_22_pre.webp",
+    "mainSrc": "ec_22.webp",
     "projectUrl": "/campaigns/ec_22/index.html"
   },
   "millionETcoin": {
     "type": "ec",
     "mainTitle": "百萬東森幣",
-    "description": "",
-    "previewSrc": "ec_23.jpg",
+    "previewSrc": "ec_23_pre.webp",
+    "mainSrc": "ec_23.webp",
     "projectUrl": "/campaigns/ec_23/index.html"
   },
   "heatsFadeShoppingHot": {
     "type": "ec",
     "mainTitle": "暑氣消退 買氣不退",
-    "previewSrc": "ec_24.jpg",
+    "previewSrc": "ec_24_pre.webp",
+    "mainSrc": "ec_24.webp",
     "projectUrl": "/campaigns/ec_24/index.html"
   },
   "summerSale": {
     "type": "ec",
     "mainTitle": "夏殺狂歡季",
-    "previewSrc": "ec_25.jpg",
+    "previewSrc": "ec_25_pre.webp",
+    "mainSrc": "ec_25.webp",
     "projectUrl": "/campaigns/ec_25/index.html"
   },
   "refillSnack": {
     "type": "ec",
     "mainTitle": "零食備齊！跟我一起出遊去",
-    "previewSrc": "ec_26.jpg",
+    "previewSrc": "ec_26_pre.webp",
+    "mainSrc": "ec_26.webp",
     "projectUrl": "/campaigns/ec_26/index.html"
   },
   "ghostFestival": {
     "type": "ec",
     "mainTitle": "三牲四果 慶讚中元",
-    "previewSrc": "ec_27.jpg",
+    "previewSrc": "ec_27_pre.webp",
+    "mainSrc": "ec_27.webp",
     "projectUrl": "/campaigns/ec_27/index.html"
   },
   "loveMomAtHome": {
     "type": "ec",
     "mainTitle": "極致寵愛",
-    "previewSrc": "ec_28.jpg",
+    "previewSrc": "ec_28_pre.webp",
+    "mainSrc": "ec_28.webp",
     "projectUrl": "/campaigns/ec_28/index.html"
   },
   "travelWithFashion": {
     "type": "ec",
     "mainTitle": "跟著時尚去旅行",
-    "previewSrc": "ec_29.jpg",
+    "previewSrc": "ec_29_pre.webp",
+    "mainSrc": "ec_29.webp",
     "projectUrl": "/campaigns/ec_29/index.html"
   },
   "instantDrinks": {
     "type": "ec",
     "mainTitle": "輕響樂活節",
-    "previewSrc": "ec_30.jpg",
+    "previewSrc": "ec_30_pre.webp",
+    "mainSrc": "ec_30.webp",
     "projectUrl": "/campaigns/ec_30/index.html"
   },
   "omgShopping": {
     "type": "ec",
     "mainTitle": "媽呀！真好買",
-    "previewSrc": "ec_31.jpg",
+    "previewSrc": "ec_31_pre.webp",
+    "mainSrc": "ec_31.webp",
     "projectUrl": "/campaigns/ec_31/index.html"
   },
   "soySauce": {
     "type": "ec",
     "mainTitle": "豆油伯醬好味",
-    "previewSrc": "ec_32.jpg",
+    "previewSrc": "ec_32_pre.webp",
+    "mainSrc": "ec_32.webp",
     "projectUrl": "/campaigns/ec_32/index.html"
   },
   "searchTaiwanHotel": {
     "type": "ec",
     "mainTitle": "全台親子飯店特搜",
-    "previewSrc": "ec_33.jpg",
+    "previewSrc": "ec_33_pre.webp",
+    "mainSrc": "ec_33.webp",
     "projectUrl": "/campaigns/ec_33/index.html"
   },
   "babyLetsPlay": {
     "type": "ec",
     "mainTitle": "寶貝七逃趣",
-    "previewSrc": "ec_34.jpg"
+    "previewSrc": "ec_34_pre.webp",
+    "mainSrc": "ec_34.webp"
   },
   "movieCuteHero": {
     "type": "ec",
     "mainTitle": "電影界的萌主角",
-    "previewSrc": "ec_35.jpg",
+    "previewSrc": "ec_35_pre.webp",
+    "mainSrc": "ec_35.webp",
     "projectUrl": "/campaigns/ec_35/index.html"
   },
   "yearEndSnack": {
     "type": "ec",
     "mainTitle": "歲末年終零食感謝祭",
-    "previewSrc": "ec_36.jpg",
+    "previewSrc": "ec_36_pre.webp",
+    "mainSrc": "ec_36.webp",
     "projectUrl": "/campaigns/ec_36/index.html"
   },
   "chopHands": {
     "type": "ec",
     "mainTitle": "1212就要剁手手",
-    "previewSrc": "ec_37.jpg",
+    "previewSrc": "ec_37_pre.webp",
+    "mainSrc": "ec_37.webp",
     "projectUrl": "/campaigns/ec_37/index.html"
   },
   "hotSaleSnack": {
     "type": "banner",
     "mainTitle": "TOP 30 熱銷零食",
-    "previewSrc": "banner_1.jpg"
+    "previewSrc": "banner_1.webp",
+    "mainSrc": "banner_1.webp"
   },
   "billSale": {
     "type": "banner",
     "mainTitle": "鈔省優惠",
-    "previewSrc": "banner_4.jpg"
+    "previewSrc": "banner_4.webp",
+    "mainSrc": "banner_4.webp"
   },
   "loveWomen": {
     "type": "banner",
     "mainTitle": "寵愛女性",
-    "previewSrc": "banner_10.jpg"
+    "previewSrc": "banner_10.webp",
+    "mainSrc": "banner_10.webp"
   },
   "E-shine": {
     "type": "banner",
     "mainTitle": "領券再折",
-    "previewSrc": "banner_7.jpg"
+    "previewSrc": "banner_7.webp",
+    "mainSrc": "banner_7.webp"
   },
   "ghostFestivalSnack": {
     "type": "banner",
     "mainTitle": "中元普渡 首選零食",
-    "previewSrc": "banner_13.jpg"
+    "previewSrc": "banner_13.webp",
+    "mainSrc": "banner_13.webp"
   },
   "gift": {
     "type": "banner",
     "mainTitle": "禮",
-    "previewSrc": "banner_14.jpg"
+    "previewSrc": "banner_14.webp",
+    "mainSrc": "banner_14.webp"
   },
   "midYearAnniversary": {
     "type": "banner",
     "mainTitle": "年中慶",
-    "previewSrc": "banner_15.jpg"
+    "previewSrc": "banner_15.webp",
+    "mainSrc": "banner_15.webp"
   },
   "brandCounter": {
     "type": "banner",
     "mainTitle": "專櫃大牌",
-    "previewSrc": "banner_16.jpg"
+    "previewSrc": "banner_16.webp",
+    "mainSrc": "banner_16.webp"
   },
   "BenvolHairDryer": {
     "type": "banner",
     "mainTitle": "溫控負離子吹風機",
-    "previewSrc": "banner_17.jpg"
+    "previewSrc": "banner_17.webp",
+    "mainSrc": "banner_17.webp"
   },
   "slimCurve": {
     "type": "banner",
     "mainTitle": "雕塑窈窕曲線",
-    "previewSrc": "banner_18.jpg"
+    "previewSrc": "banner_18.webp",
+    "mainSrc": "banner_18.webp"
   },
   "hotSaleFoundation": {
     "type": "banner",
     "mainTitle": "熱銷底妝組",
-    "previewSrc": "banner_19.jpg"
+    "previewSrc": "banner_19.webp",
+    "mainSrc": "banner_19.webp"
   },
   "ustini": {
     "type": "banner",
     "mainTitle": "春夏熱銷品",
-    "previewSrc": "banner_20.jpg"
+    "previewSrc": "banner_20.webp",
+    "mainSrc": "banner_20.webp"
   },
   "charmingMenWear": {
     "type": "banner",
     "mainTitle": "魅力男裝 百搭內著",
-    "previewSrc": "banner_21.jpg"
+    "previewSrc": "banner_21.webp",
+    "mainSrc": "banner_21.webp"
   },
   "hotSale": {
     "type": "banner",
     "mainTitle": "熱銷爆款",
-    "previewSrc": "banner_22.jpg"
+    "previewSrc": "banner_22.webp",
+    "mainSrc": "banner_22.webp"
   },
   "HaNA": {
     "type": "banner",
     "mainTitle": "全館85折",
-    "previewSrc": "banner_23.jpg"
+    "previewSrc": "banner_23.webp",
+    "mainSrc": "banner_23.webp"
   },
   "chanelPerfume": {
     "type": "banner",
     "mainTitle": "香水品牌慶",
-    "previewSrc": "banner_24.jpg"
+    "previewSrc": "banner_24.webp",
+    "mainSrc": "banner_24.webp"
   },
   "cherryBlossom": {
     "type": "banner",
     "mainTitle": "2023台灣櫻花季",
-    "previewSrc": "banner_27.jpg"
+    "previewSrc": "banner_27.webp",
+    "mainSrc": "banner_27.webp"
   },
   "outdoorHotSpring": {
     "type": "banner",
     "mainTitle": "全台特色好湯",
-    "previewSrc": "banner_28.jpg"
+    "previewSrc": "banner_28.webp",
+    "mainSrc": "banner_28.webp"
   },
   "winterBrandFeedBack": {
     "type": "banner",
     "mainTitle": "冬季品牌回饋",
-    "previewSrc": "banner_30.jpg"
+    "previewSrc": "banner_30.webp",
+    "mainSrc": "banner_30.webp"
   },
   "vitamin": {
     "type": "banner",
     "mainTitle": "維他命",
-    "previewSrc": "banner_25.jpg"
+    "previewSrc": "banner_25.webp",
+    "mainSrc": "banner_25.webp"
   },
   "pegasus": {
     "type": "banner",
     "mainTitle": "步步彈力腳感",
-    "previewSrc": "banner_2.jpg"
+    "previewSrc": "banner_2.webp",
+    "mainSrc": "banner_2.webp"
   },
   "gorgeousAccessories": {
     "type": "banner",
     "mainTitle": "絕美配飾",
-    "previewSrc": "banner_5.jpg"
+    "previewSrc": "banner_5.webp",
+    "mainSrc": "banner_5.webp"
   },
   "freeMeat": {
     "type": "banner",
     "mainTitle": "免費加贈肉品",
-    "previewSrc": "banner_8.jpg"
+    "previewSrc": "banner_8.webp",
+    "mainSrc": "banner_8.webp"
   },
   "airForce": {
     "type": "banner",
     "mainTitle": "經典籃球風格",
-    "previewSrc": "banner_11.jpg"
+    "previewSrc": "banner_11.webp",
+    "mainSrc": "banner_11.webp"
   },
   "superSlim": {
     "type": "banner",
     "mainTitle": "年度超纖大賞",
-    "previewSrc": "banner_26.jpg"
+    "previewSrc": "banner_26.webp",
+    "mainSrc": "banner_26.webp"
   },
   "fashionCollection": {
     "type": "banner",
     "mainTitle": "時尚精品",
-    "previewSrc": "banner_29.jpg"
+    "previewSrc": "banner_29.webp",
+    "mainSrc": "banner_29.webp"
   },
   "trendingWatch": {
     "type": "banner",
     "mainTitle": "流行手錶",
-    "previewSrc": "banner_31.jpg"
+    "previewSrc": "banner_31.webp",
+    "mainSrc": "banner_31.webp"
   },
   "makeupWeekendSale": {
     "type": "banner",
     "mainTitle": "美妝週末特賣",
-    "previewSrc": "banner_32.jpg"
+    "previewSrc": "banner_32.webp",
+    "mainSrc": "banner_32.webp"
   },
   "limitedEdition": {
     "type": "banner",
     "mainTitle": "限定款",
-    "previewSrc": "banner_33.jpg"
+    "previewSrc": "banner_33.webp",
+    "mainSrc": "banner_33.webp"
   },
   "double11skirmish": {
     "type": "banner",
     "mainTitle": "雙11前哨戰",
-    "previewSrc": "banner_34.jpg"
+    "previewSrc": "banner_34.webp",
+    "mainSrc": "banner_34.webp"
   },
   "costa": {
     "type": "banner",
     "mainTitle": "詩歌達郵輪莎倫娜號",
-    "previewSrc": "banner_56.jpg"
+    "previewSrc": "banner_56.webp",
+    "mainSrc": "banner_56.webp"
   },
   "cleanFurDiy": {
     "type": "banner",
     "mainTitle": "清潔除毛DIY",
-    "previewSrc": "banner_41.jpg"
+    "previewSrc": "banner_41.webp",
+    "mainSrc": "banner_41.webp"
   },
   "top50makeup": {
     "type": "banner",
     "mainTitle": "美妝夯物",
-    "previewSrc": "banner_35.jpg"
+    "previewSrc": "banner_35.webp",
+    "mainSrc": "banner_35.webp"
   },
   "chillCamping": {
     "type": "banner",
     "mainTitle": "露營好chill",
-    "previewSrc": "banner_36.jpg"
+    "previewSrc": "banner_36.webp",
+    "mainSrc": "banner_36.webp"
   },
   "hotSaleMakeup": {
     "type": "banner",
     "mainTitle": "熱銷彩妝香氛",
-    "previewSrc": "banner_37.jpg"
+    "previewSrc": "banner_37.webp",
+    "mainSrc": "banner_37.webp"
   },
   "shoppingMonth": {
     "type": "banner",
     "mainTitle": "全民購物月",
-    "previewSrc": "banner_38.jpg"
+    "previewSrc": "banner_38.webp",
+    "mainSrc": "banner_38.webp"
   },
   "brandAccessories": {
     "type": "banner",
     "mainTitle": "精品配件",
-    "previewSrc": "banner_39.jpg"
+    "previewSrc": "banner_39.webp",
+    "mainSrc": "banner_39.webp"
   },
   "dadForYou": {
     "type": "banner",
     "mainTitle": "歐爸獻給你",
-    "previewSrc": "banner_40.jpg"
+    "previewSrc": "banner_40.webp",
+    "mainSrc": "banner_40.webp"
   },
   "summerSmartStorage": {
     "type": "banner",
     "mainTitle": "盛夏聰明收納",
-    "previewSrc": "banner_43.jpg"
+    "previewSrc": "banner_43.webp",
+    "mainSrc": "banner_43.webp"
   },
   "summerSoppingParty": {
     "type": "banner",
     "mainTitle": "夏日購物趴",
-    "previewSrc": "banner_44.jpg"
+    "previewSrc": "banner_44.webp",
+    "mainSrc": "banner_44.webp"
   },
   "panasonic": {
     "type": "banner",
     "mainTitle": "國際牌家電",
-    "previewSrc": "banner_3.jpg"
+    "previewSrc": "banner_3.webp",
+    "mainSrc": "banner_3.webp"
   },
   "AmorAccessories": {
     "type": "banner",
     "mainTitle": "質感美飾",
-    "previewSrc": "banner_6.jpg"
+    "previewSrc": "banner_6.webp",
+    "mainSrc": "banner_6.webp"
   },
   "summerMoisturizing": {
     "type": "banner",
     "mainTitle": "夏日保濕 滿額3重送",
-    "previewSrc": "banner_9.jpg"
+    "previewSrc": "banner_9.webp",
+    "mainSrc": "banner_9.webp"
   },
   "MSC": {
     "type": "banner",
     "mainTitle": "地中海郵輪 榮耀號",
-    "previewSrc": "banner_12.jpg"
+    "previewSrc": "banner_12.webp",
+    "mainSrc": "banner_12.webp"
   },
   "StarDeliciousGift": {
     "type": "banner",
     "mainTitle": "星美味好禮送",
-    "previewSrc": "banner_42.jpg"
+    "previewSrc": "banner_42.webp",
+    "mainSrc": "banner_42.webp"
   },
   "safeBra": {
     "type": "banner",
     "mainTitle": "手捧 集中 提托",
-    "previewSrc": "banner_45.jpg"
+    "previewSrc": "banner_45.webp",
+    "mainSrc": "banner_45.webp"
   },
   "timberlandSummerShopping": {
     "type": "banner",
     "mainTitle": "夏日購物節",
-    "previewSrc": "banner_46.jpg"
+    "previewSrc": "banner_46.webp",
+    "mainSrc": "banner_46.webp"
   },
   "adidasSale": {
     "type": "banner",
     "mainTitle": "adidas 5折up",
-    "previewSrc": "banner_47.jpg"
+    "previewSrc": "banner_47.webp",
+    "mainSrc": "banner_47.webp"
   },
   "comfortableUnderwear": {
     "type": "banner",
     "mainTitle": "極致舒適 內衣睡褲",
-    "previewSrc": "banner_48.jpg"
+    "previewSrc": "banner_48.webp",
+    "mainSrc": "banner_48.webp"
   },
   "summerBeginSale": {
     "type": "banner",
     "mainTitle": "初夏狂歡購物節",
-    "previewSrc": "banner_49.jpg"
+    "previewSrc": "banner_49.webp",
+    "mainSrc": "banner_49.webp"
   },
   "nikeSale": {
     "type": "banner",
     "mainTitle": "NIKE 40% OFF",
-    "previewSrc": "banner_50.jpg"
+    "previewSrc": "banner_50.webp",
+    "mainSrc": "banner_50.webp"
   },
   "coolSofa": {
     "type": "banner",
     "mainTitle": "入夏預備購",
-    "previewSrc": "banner_51.jpg"
+    "previewSrc": "banner_51.webp",
+    "mainSrc": "banner_51.webp"
   },
   "freePromotion": {
     "type": "banner",
     "mainTitle": "升等免費",
-    "previewSrc": "banner_52.jpg"
+    "previewSrc": "banner_52.webp",
+    "mainSrc": "banner_52.webp"
   },
   "catGrabSofa": {
     "type": "banner",
     "mainTitle": "毛小孩家庭首選",
-    "previewSrc": "banner_53.jpg"
+    "previewSrc": "banner_53.webp",
+    "mainSrc": "banner_53.webp"
   },
   "trendingExercise": {
     "type": "banner",
     "mainTitle": "潮流運動",
-    "previewSrc": "banner_54.jpg"
+    "previewSrc": "banner_54.webp",
+    "mainSrc": "banner_54.webp"
   },
   "midoriHairDryer": {
     "type": "banner",
     "mainTitle": "美多莉吹風機",
-    "previewSrc": "banner_55.jpg"
+    "previewSrc": "banner_55.webp",
+    "mainSrc": "banner_55.webp"
   },
   "JapanMountain": {
     "type": "banner",
     "mainTitle": "日本立山黑部 震撼開山",
-    "previewSrc": "banner_57.jpg"
+    "previewSrc": "banner_57.webp",
+    "mainSrc": "banner_57.webp"
   },
   "CHIAYUM": {
     "type": "banner",
     "mainTitle": "嚴選好食 安心品質",
-    "previewSrc": "banner_58.jpg"
+    "previewSrc": "banner_58.webp",
+    "mainSrc": "banner_58.webp"
   },
   "bigMouthEatMeat": {
     "type": "banner",
     "mainTitle": "大口吃肉季",
-    "previewSrc": "banner_59.jpg"
+    "previewSrc": "banner_59.webp",
+    "mainSrc": "banner_59.webp"
   },
   "officeBag": {
     "type": "banner",
     "mainTitle": "上班族包款",
-    "previewSrc": "banner_60.jpg"
+    "previewSrc": "banner_60.webp",
+    "mainSrc": "banner_60.webp"
   },
   "queensCheckroom": {
     "type": "other",
     "mainTitle": "女王的衣帽間",
-    "previewSrc": "other_1.gif",
+    "previewSrc": "other_1.webp",
+    "mainSrc": "other_1.webp",
     "projectUrl": "/campaigns/other_1/index.html"
   },
   "lucyHealthExercise": {
     "type": "other",
     "mainTitle": "Lucy健康操",
-    "previewSrc": "other_2.jpg",
+    "previewSrc": "other_2.webp",
+    "mainSrc": "other_2.webp",
     "projectUrl": "/campaigns/other_2/index.html"
   },
   "rabbitPullingLuckyRadish": {
     "type": "other",
     "mainTitle": "玉兔拔彩頭",
-    "previewSrc": "other_3.gif",
+    "previewSrc": "other_3.webp",
+    "mainSrc": "other_3.webp",
     "projectUrl": "/campaigns/other_3/index.html"
   },
   "dadHurryUp": {
     "type": "other",
     "mainTitle": "爸爸趕路中",
-    "previewSrc": "other_5.gif",
+    "previewSrc": "other_5.webp",
+    "mainSrc": "other_5.webp",
     "projectUrl": "/campaigns/other_5/index.html"
   },
   "anotherBowl": {
     "type": "other",
     "mainTitle": "再來一碗",
-    "previewSrc": "other_4.jpg",
+    "previewSrc": "other_4.webp",
+    "mainSrc": "other_4.webp",
     "projectUrl": "/campaigns/other_4/index.html"
   },
   "friendIllustration": {
     "type": "other",
     "mainTitle": "2023插畫作品集",
-    "previewSrc": "other_6.png"
+    "previewSrc": "other_6.webp",
+    "mainSrc": "other_6.webp"
   }
 }

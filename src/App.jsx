@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 //導入樣式
 import "./styles/App.css";
 //導入元件
@@ -31,7 +32,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter basename="/2026-Portfolio">
+    <Router>
       <ScrollToTop />
       <div className="app-wrapper">
         <Navbar />
@@ -48,7 +49,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
