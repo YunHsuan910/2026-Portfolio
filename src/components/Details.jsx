@@ -61,7 +61,7 @@ function Details() {
             <div className="img">
               {getFileType(data.mainImgName) === "mp4" ||
               getFileType(data.mainImgName) === "webm" ? (
-                <video controls autoPlay loop muted playsInline webkit-playsinline="true">
+                <video autoPlay loop muted playsInline webkit-playsinline="true">
                   <source
                     src={getImageUrl(data.mainImgName)}
                     type="video/mp4"
@@ -108,7 +108,7 @@ function Details() {
             <div className="img">
               {getFileType(data.subImgName) === "mp4" ||
               getFileType(data.subImgName) === "webm" ? (
-                <video controls autoPlay loop muted playsInline webkit-playsinline="true">
+                <video autoPlay loop muted playsInline webkit-playsinline="true">
                   <source src={getImageUrl(data.subImgName)} type="video/mp4" />
                 </video>
               ) : (
@@ -142,7 +142,7 @@ function Details() {
             <div className="img">
               {getFileType(data.PcImgName) === "mp4" ||
               getFileType(data.PcImgName) === "webm" ? (
-                <video controls autoPlay loop muted playsInline webkit-playsinline="true">
+                <video autoPlay loop muted playsInline webkit-playsinline="true">
                   <source src={getImageUrl(data.PcImgName)} type="video/mp4" />
                 </video>
               ) : (
