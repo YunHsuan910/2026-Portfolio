@@ -54,14 +54,14 @@ function Details() {
           className="section sectionL"
           initial="initial"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           variants={fadeInVariant}
         >
           <div className="mobile">
             <div className="img">
               {getFileType(data.mainImgName) === "mp4" ||
               getFileType(data.mainImgName) === "webm" ? (
-                <video controls loop muted>
+                <video controls autoPlay loop muted>
                   <source
                     src={getImageUrl(data.mainImgName)}
                     type="video/mp4"
@@ -95,7 +95,7 @@ function Details() {
           className="section sectionR"
           initial="initial"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           variants={fadeInVariant}
         >
           <div className="text">
@@ -108,7 +108,7 @@ function Details() {
             <div className="img">
               {getFileType(data.subImgName) === "mp4" ||
               getFileType(data.subImgName) === "webm" ? (
-                <video controls loop muted>
+                <video controls autoPlay loop muted>
                   <source src={getImageUrl(data.subImgName)} type="video/mp4" />
                 </video>
               ) : (
@@ -129,7 +129,7 @@ function Details() {
           className="section"
           initial="initial"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           variants={fadeInVariant}
         >
           <div className="text">
@@ -142,7 +142,7 @@ function Details() {
             <div className="img">
               {getFileType(data.PcImgName) === "mp4" ||
               getFileType(data.PcImgName) === "webm" ? (
-                <video controls loop muted>
+                <video controls autoPlay loop muted>
                   <source src={getImageUrl(data.PcImgName)} type="video/mp4" />
                 </video>
               ) : (

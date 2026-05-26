@@ -9,7 +9,7 @@ function Waterfall({ project, openLightbox, getPreviewImageUrl }) {
       }
     >
       <img
-        src={getPreviewImageUrl(project.mainSrc)}
+        src={getPreviewImageUrl(project.previewSrc)}
         alt={project.mainTitle}
         loading="lazy"
       />
