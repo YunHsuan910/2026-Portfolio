@@ -46,7 +46,7 @@ function Details() {
   return (
     <div className="detailWrap">
       <div className="imgStart">
-        <img src={getImageUrl(data.imgStartName)} alt="首圖" loading="lazy"/>
+        <img src={getImageUrl(data.imgStartName)} alt="首圖"/>
       </div>
       {/* 介紹區1 */}
       {data.mainImgName ? (
@@ -68,11 +68,11 @@ function Details() {
                   />
                 </video>
               ) : (
-                <img src={getImageUrl(data.mainImgName)} alt="介紹圖" loading="lazy"/>
+                <img src={getImageUrl(data.mainImgName)} alt="介紹圖"/>
               )}
             </div>
             <div className="frame">
-              <img src={mobileFrame} alt="手機框" loading="lazy"/>
+              <img src={mobileFrame} alt="手機框"/>
             </div>
           </div>
 
@@ -112,11 +112,11 @@ function Details() {
                   <source src={getImageUrl(data.subImgName)} type="video/mp4" />
                 </video>
               ) : (
-                <img src={getImageUrl(data.subImgName)} alt="介紹圖" loading="lazy"/>
+                <img src={getImageUrl(data.subImgName)} alt="介紹圖"/>
               )}
             </div>
             <div className="frame">
-              <img src={mobileFrame} alt="手機框" loading="lazy"/>
+              <img src={mobileFrame} alt="手機框"/>
             </div>
           </div>
         </motion.section>
@@ -146,11 +146,11 @@ function Details() {
                   <source src={getImageUrl(data.PcImgName)} type="video/mp4" />
                 </video>
               ) : (
-                <img src={getImageUrl(data.PcImgName)} alt="介紹圖" loading="lazy"/>
+                <img src={getImageUrl(data.PcImgName)} alt="介紹圖"/>
               )}
             </div>
             <div className="frame">
-              <img src={pcFrame} alt="電腦框" loading="lazy"/>
+              <img src={pcFrame} alt="電腦框"/>
             </div>
           </div>
         </motion.section>
@@ -161,7 +161,7 @@ function Details() {
       {/* 結尾圖 */}
       {data.imgEndName ? (
         <div className="imgEnd">
-          <img src={getImageUrl(data.imgEndName)} alt="結尾圖" loading="lazy"/>
+          <img src={getImageUrl(data.imgEndName)} alt="結尾圖"/>
         </div>
       ) : (
         <></>

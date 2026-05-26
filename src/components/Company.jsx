@@ -16,7 +16,7 @@ function Company({ time, name, jobTitle, description }) {
   return (
     <div className="company">
       <div className="icon">
-        <img src={location} alt="座標" loading="lazy"/>
+        <img src={location} alt="座標"/>
       </div>
       <motion.div
         className="textWrap"

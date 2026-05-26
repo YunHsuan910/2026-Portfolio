@@ -29,7 +29,7 @@ function Project({ id, title, description, previewSrc }) {
           <div className="btn">更多詳情</div>
         </div>
         <div className="imgWrap">
-          <img src={previewSrc} alt="預覽圖" loading="lazy" />
+          <img src={previewSrc} alt="預覽圖" />
         </div>
       </motion.div>
     </Link>

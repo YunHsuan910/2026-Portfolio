@@ -5,11 +5,11 @@ function Category({ iconSrc, imgSrc, title, content, id }) {
   return (
     <Link className="category" to={`/project/${id}`}>
       <div className="icon">
-        <img src={iconSrc} alt="icon" loading="lazy"/>
+        <img src={iconSrc} alt="icon"/>
       </div>
       <div className="card">
         <div className="picture">
-          <img src={imgSrc} alt="作品預覽" loading="lazy"/>
+          <img src={imgSrc} alt="作品預覽"/>
         </div>
         <div className="intro">
           <div className="title">{title}</div>
