@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ProgressiveLightboxImage } from "../components/ProgressiveLightboxImage";
+// import { ProgressiveLightboxImage } from "../components/ProgressiveLightboxImage";
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 function LightBox({ lightbox, closeLightbox }) {
-  const lowResSrc = `${lightbox.imgSrc}?w=20&format=webp&as=metadata`;
-  const highResSrcset = `${lightbox.imgSrc}?w=768;1200;1920&format=webp&as=srcset`;
-  const fallbackSrc = lightbox.imgSrc; // 原圖作為備用防線
+  // const lowResSrc = `${lightbox.imgSrc}?w=20&format=webp&as=metadata`;
+  // const highResSrcset = `${lightbox.imgSrc}?w=768;1200;1920&format=webp&as=srcset`;
+  // const fallbackSrc = lightbox.imgSrc; // 原圖作為備用防線
   return (
     <div className="lightboxOverlay" onClick={closeLightbox}>
       <div className="lightboxContent" onClick={(e) => e.stopPropagation()}>
@@ -22,14 +22,14 @@ function LightBox({ lightbox, closeLightbox }) {
         </button>
         <div className="detail">
           <div className="img">
-            <ProgressiveLightboxImage
+            {/* <ProgressiveLightboxImage
               key={highResSrcset}
               lowResSrc={lowResSrc}
               highResSrcset={highResSrcset}
               fallbackSrc={fallbackSrc}
               alt={lightbox.title || "放大預覽"}
-            />
-            {/* <img src={lightbox.imgSrc} alt="放大預覽"/> */}
+            /> */}
+            <img src={lightbox.imgSrc} alt="放大預覽"/>
           </div>
           <div className="infoWrap">
             <div className="title">{lightbox.title}</div>
